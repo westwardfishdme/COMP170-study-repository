@@ -170,7 +170,7 @@ print(hello world
 print("hello world!")
 ```
 Python CAN use semicolons, but typically this is done either as a stylistic choice, or a on page formatting solution.
-However, unlike most languages, it does not require them, which is will be a muscle memory issue when you learn more languages.
+However, unlike most languages, it does not require them, which will become a muscle memory issue as you learn more languages.
 
 You can use semicolons to do something on a single line, but note that this is not really done in python, and does
 reduce the readability of your code:
