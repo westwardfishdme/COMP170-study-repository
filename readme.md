@@ -66,8 +66,8 @@ to watch to learn how to program. On my train ride home, I thought to myself:
 and so I did, it's the one you're reading right now ;)
 
 Most information will be passed along in this single readme, but I might change that. 
-This repository is going to be less complicated than the textbook, and not depending on the severity more or less in depth,
-on certain topics, but I will try and make it as digestible as possible. 
+This repository is going to be less vague than the textbook, and not depending on the how specific I get, more or less in depth and advanced. I will try my 
+absolute best to make it as digestible as possible for intro programmers. 
 
 Since I am a full time student however, and I cannot fully invest all of my time into synthesizing 
 all information properly, feel free to send a pull request or send an issue and I will look through
