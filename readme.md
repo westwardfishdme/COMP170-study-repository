@@ -61,7 +61,7 @@ Needless to say, I am relatively 'advanced' in the field, but like y'all I am st
 I was inspired to make this repository because someone in class asked if I could synthesize a list of youtube videos for them 
 to watch to learn how to program. On my train ride home, I thought to myself:
 
-"Damn, I can literally write an actual study guide for the whole class if I really wanted to..."
+"Damn, I can literally write an actual guide for the whole class if I really wanted to..."
 
 and so I did, it's the one you're reading it now ;)
 
@@ -81,6 +81,11 @@ I also included some bonus information and some good practices for you to look a
 Inside of the example folder I also included a really easy to digest comprehensive python project that
 I wrote with numerous comments to help understand what is happening, what interacts with what, and so on so forth.
 
+As per the syllabus, I am unable to share my answers with you (bummer...) but I highly incentivize you to
+try to commit yourself to doing those assignments. While they seem REALLY difficult, I promise you they do actually
+teach you how to think algorithmically, and coming from a lifelong independently learning programmer who has gone to 
+learn python 3 times now from schools (elementary, high school, and college now...), those exercises really do help.
+
 With that said, I hope this guide serves you well, and you find this easy to learn!
 
 ## Miscellaneous Videos and Other Learning Resources
@@ -91,6 +96,7 @@ are truly interested in programming, these are some books that I had read and vi
 - [Fireship's wonderful video on how you should learn how to code](https://www.youtube.com/watch?v=NtfbWkxJTHw)
 - [NetworkChuck's playlist on coding in python](https://www.youtube.com/watch?v=mRMmlo_Uqcs&list=PLIhvC56v63ILPDA2DQBv0IKzqsWTZxCkp)
 - [Coding is easy, actually](https://www.youtube.com/watch?v=qkFYqY3vr84)
+- [GeeksForGeeks Python Tutorial Module](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/) << this is how i learned python when i was young.
 - [How to Read Documentation Effectively](https://www.youtube.com/watch?v=q0trIfryGvY)
 - [Official Python Documentation](https://docs.python.org/3/tutorial/index.html)
 - [5 Good Python Habits](https://www.youtube.com/watch?v=I72uD8ED73U)
@@ -243,8 +249,11 @@ hello! hello! hello! hello!
 
 ```
 For some of the homework problems, you can actually use that to solve some of the problems, i.e. the rocket ships.
+
 While I have to check with Dr.Ennaoui to see if it's ok to share answers to past homework problems, I really wish I could show
 you how I solved that and retroactively add my pseudocode to explain what exactly I was thinking when I analyzed that problem.
+
+This might be a thing we do in class however, yet to see.
 
 ## Functions
 
