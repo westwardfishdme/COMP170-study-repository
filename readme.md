@@ -63,7 +63,7 @@ to watch to learn how to program. On my train ride home, I thought to myself:
 
 "Damn, I can literally write an actual guide for the whole class if I really wanted to..."
 
-and so I did, it's the one you're reading it now ;)
+and so I did, it's the one you're reading right now ;)
 
 Most information will be passed along in this single readme, but I might change that. 
 This repository is going to be less complicated than the textbook, and not depending on the severity more or less in depth,
