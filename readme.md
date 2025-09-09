@@ -54,7 +54,6 @@ The reason why I say this and mention this video at all is because this course i
 programmer to create and problem solve. Great programmers like the guy in that video, Dennis Ritchie, Grace Hopper, or Steve Wozniak didn't just become magically good at programming,
 they became great programmers because they practiced and learned how to solve difficult problems using **pattern based thinking.**
 
-
 Needless to say, I am relatively 'advanced' in the field, but like y'all I am still learning.
 
 ### Why I made this, how you should use it, and covering past assignments.
@@ -95,6 +94,7 @@ Here are some other resources you should check out to help study and learn, thes
 are truly interested in programming, these are some books that I had read and videos 
 
 **LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER**
+
 - [Fireship's wonderful video on how you should learn how to code](https://www.youtube.com/watch?v=NtfbWkxJTHw)
 - [NetworkChuck's playlist on coding in python](https://www.youtube.com/watch?v=mRMmlo_Uqcs&list=PLIhvC56v63ILPDA2DQBv0IKzqsWTZxCkp)
 - [Coding is easy, actually](https://www.youtube.com/watch?v=qkFYqY3vr84)
@@ -103,11 +103,23 @@ are truly interested in programming, these are some books that I had read and vi
 - [Official Python Documentation](https://docs.python.org/3/tutorial/index.html)
 - [5 Good Python Habits](https://www.youtube.com/watch?v=I72uD8ED73U)
 
+**Topics/Wiki articles you should study to help you succeed in programming**
+
+These articles aren't Python Specific, but I highly recommend you read them.
+
+- [The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
+- [KISS Principle (Keep It Simple, Stupid!)](https://en.wikipedia.org/wiki/KISS_principle)
+- [DRY Principle (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+- [Modular Programming](https://en.wikipedia.org/wiki/Modular_programming)
+- [What is Pattern-Based Thinking?](https://www.knapsack.cloud/blog/pattern-based-thinking)
+
+
 **BOOKS UNRELATED TO THE COURSE THAT I THINK YOU SHOULD CHECK OUT**
 - [The Hacker Ethic and the Spirit of the Information Age](https://archive.org/details/TheHackerEthicAndTheSpiritOfTheInformationAge)
 - [Algorithms - Panos Louridas](https://www.amazon.com/Algorithms-MIT-Press-Essential-Knowledge/dp/0262539020)
+- [The C Programming Language](https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/C_Book_2nd.pdf)
 
-You don't have to check these videos out at all, but they do help reinforce REALLY good learning habits when it comes to programming,
+You don't have to check these videos or articles out at all, but they do help reinforce REALLY good learning habits when it comes to programming,
 they were videos that I have sent out to my friends who have asked me how to learn how to program, and it's helped them in their careers.
 
 The book on the hacker ethic isn't just necessarily pertaining to computer 'hacking' but is rather a change in mindset to how one accomplishes
