@@ -46,7 +46,7 @@ You can see an example of that in this [video of a guy writing a whole webserver
 If you feel like the video is too advanced, or too long, feel free to not watch it BUT I recommend you at least read my explanation of why that video matters here:
 
 Bash is not typically used to write such advanced software as the guy in the video was making, i.e. a webserver that can host a website, BUT he managed to not only make it work,
-but eloquently wrote it all in bash, without any the use of any other languages. There are some segements where he implies that there might be module that needs an implementation in C,
+but eloquently wrote it all in bash, without any the use of any other languages. There are some segements where he implies that there might be modules that needs an implementation in C,
 but nonetheless, he omits that from his final project, and accomplished an extraordinary task that I recently didn't even know was possible until he did it and mentioned other projects
 that accomplished the same thing.
 
