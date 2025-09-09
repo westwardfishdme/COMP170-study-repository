@@ -4,7 +4,9 @@
 non-textbook materials...
 - [Introduction](#introduction)
 - [Useful Misc. Youtube Videos](#miscellaneous-videos-and-other-learning-resources)
+
 [A comprehensive guide to the class](#the-guide-for-comp170)
+
 - [The `print()` function](#print)
 - [Proper syntax](#syntax)
 - [Types](#basic-types)
