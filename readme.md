@@ -177,7 +177,7 @@ reduce the readability of your code:
 ```py
 print("This sentence was too long for me");print("so i used a semicolon for another print statement.")
 ```
-Syntax also include indentation, missing functions, etc.
+Syntax also includes proper indentation, fulfilling missing functions, and fulfilling missing keywords and their proper implementations.
 
 Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and match/case
 statements (also something we haven't covered yet, but it's like a special `if/then` statement, i'll explain later.) 
