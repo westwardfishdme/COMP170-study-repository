@@ -246,7 +246,7 @@ Floats will be very painful if not handled properly, and you have to keep track 
 programming languages suffer from this.
 
 
-AFAIK, there is no implementation to directly solve this python without you having to write extra code to ensure that the a result from a
+AFAIK, there is no implementation to directly solve this in python without you having to write extra code to ensure that the a result from a
 problem such as `120.1-120` is arithmetically correct. That isn't to say that there aren't workarounds to this issue. 
 
 You can mitigate this with tools that python provides, but note that this is an issue that has to do with how numbers are represented within a computer.
