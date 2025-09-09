@@ -392,7 +392,7 @@ def main():
   # see the section on variables.
 
   result1=addition(10,20,30,40) #adds all these numbers together... (result1=100)
-  final_result=second_round_add(result1, 30) # multiplies result1 by 30... (100*30)
+  final_result=multiply(result1, 30) # multiplies result1 by 30... (100*30)
 
   print("Result:",str(final_result))#print out the result of 3000, notice I how I typecasted to print out the result.
 
