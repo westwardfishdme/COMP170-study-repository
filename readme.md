@@ -24,7 +24,7 @@ With that said, I hope this guide serves you well, and you find this easy to lea
 - [Types](#basic-types)
 - [Functions](#functions)
 
-### Print 
+## Print 
 In almost every programming language, there are ways to output messages or as we'll learn later, 
 variables to the screen this is almost always called `print`, but some languages will have a slightly
 different nomenclature for it, 
@@ -69,7 +69,7 @@ be used to print out **debugging information**. As you grow in your journey as a
 when designing programs that have very robust and complicated processes, and will have to handle specific cases
 where you have STDERR, and STDOUT messages occuring.
 
-### Syntax
+## Syntax
 If you're using a fancy shmancy IDE (like me), you'll more than likely get warned about this as you write code.
 Typical IDE's will underline the improper code with red underlining, or a variation of which and tell you what
 exactly needs to be done to fix the error. An example of improper syntax would be:
@@ -92,7 +92,7 @@ Syntax also include indentation, missing functions, etc.
 Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and match/case
 statements (also something we haven't covered yet, but it's like a special `if/then` statement, i'll explain later.) 
 
-### Basic-Types
+## Basic-Types
 So far in class, we have covered the following data types:
 - int (integers; like 1, 2, 3, 4 ...) 
 - float (floating point numbers; 1.4, 4.29 3.39)
@@ -135,7 +135,7 @@ print("I love to write code!")
 ```
 It's important to note that `,` will produce a space while `+` will not, as Dr. Ennaoui also mentioned.
 
-### Functions 
+## Functions 
 
 #### Proper naming
 Functions and variables cannot start with certain keywords, characters, or generally numbers, this section will cover that.
