@@ -192,6 +192,20 @@ So far in class, we have covered the following data types:
 When writing a program, knowing the types is the difference between your program succeeding, and failing
 to run. In other cases, using improper types can cause undesired output, or even crashes.
 
+**Something important to note!**
+
+You can do this really cool thing called 'typecasting' where you can turn types into other types, this is best shown with integers, floats, and strings.
+Try this out in the IDLE/python shell!:
+```py
+>>>int(12.0) # will give you the integer '12'
+12
+>>>float(12)
+12.0
+>>>str(120)
+'120'
+
+```
+Type-casting will be an important skill to learn, as you will need that when you concatenate say a string with an integer. I'll show an example of this later.
 
 #### Integers
 Integers are just as they sound, numbers. 
@@ -358,6 +372,78 @@ and greet them with using only a function.
 your code less readable.
 - Give your functions or parameters very vague names, unless you are purposefully obfuscating code it just makes your program harder to maintain and less
 readable.
+
+### Parameters
+Functions come with this thing called parameters. They're essentially inputted variables for your function to work with. The little parentheses like those in `main->()<-`
+always dictate the inputted parameters of a function. It is important that when writing functions to always include those parentheses when defining because a 
+function is something that always will have parameters even if there is none (like `main()`)
+
+You can have an infinite amount of parameters, however I usually limit it to 4 at max, at which point, I would write other functions to perform different things.
+For example:
+```py
+def addition(num1, num2, num3, num4): # nums{} are my parameters
+  return num1+num2+num3+num4
+
+def multiply(num1,num2): #lets multiply some numbers too, their parameters are named num1 amd num2.
+  return num1*num2
+
+def main():
+
+  # see the section on variables.
+
+  result1=addition(10,20,30,40) #adds all these numbers together... (result1=100)
+  final_result=second_round_add(result1, 30) # multiplies result1 by 30... (100*30)
+
+  print("Result:",str(final_result))#print out the result of 3000, notice I how I typecasted to print out the result.
+
+main()
+```
+This looks complicated now, but hopefully the sections below clears some of this up for you.
+
+### Returns
+In all programming languages a function can do more than just do a specific task, it can be attributed a type as a return value.
+Say I had a function `add()` which took two parameters `num1` and `num2`, which can be either a float or an integer, but I only
+want it to give me my result as an integer.
+
+When I write the function `add()`, it might look something like this:
+
+```py
+def add(num1, num2):
+  return int(num1+num2) # i can just cast the whole equation as an int, and this will always return type int.
+```
+Thinking of functions like this will help you out with soooooo many programming problems. Not only because it makes your job a lot simpler,
+but because you have to will be able to pre-plan what functions will do inside of your program, allowing you to delegate responsibilities
+to certain functions.
+
+However, returns can also be used to give signals:
+```py
+# i haven't talked about if statements yet in depth, but they just check boolean values...
+def some_function(some_string):
+  if some_string=="hi":
+    return 2
+  elif some_string=="goodbye":
+    return 1
+  else:
+    return 0
+
+# you can also write this as a match/case statement.
+# you should do this if there are more than one possibility so
+# you don't have a million if elif statements.
+
+def some_function_using_match(some_string):
+  match some_string:
+    case "hi":
+      return 2
+    case "goodbye":
+      return 1
+    case _:
+      return 0
+```
+These will return either the values {0,1,2} respectively should the conditions of `some_string` are "hi", "goodbye", or anything else.
+It is also probably important to note that it's not setting some_string is lowercase, so if you were to have `some_string` be something
+like "Hi", "hI" or "gOodbYe" it will always return 0.
+
+This is called input formatting, which I'll likely cover at a later date.
 
 ## Variables
 Variables are the primary method of storage in any programming language. In almost all programming languages you must specify the type, however what makes
