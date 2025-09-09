@@ -81,6 +81,8 @@ I also included some bonus information and some good practices for you to look a
 Inside of the example folder I also included a really easy to digest comprehensive python project that
 I wrote with numerous comments to help understand what is happening, what interacts with what, and so on so forth.
 
+(I haven't finished that yet, but you'll see it here if you check back at a later date...)
+
 As per the syllabus, I am unable to share my answers with you (bummer...) but I highly incentivize you to
 try to commit yourself to doing those assignments. While they seem REALLY difficult, I promise you they do actually
 teach you how to think algorithmically, and coming from a lifelong independently learning programmer who has gone to 
@@ -182,18 +184,72 @@ statements (also something we haven't covered yet, but it's like a special `if/t
 
 ## Basic-Types
 So far in class, we have covered the following data types:
-- int (integers; like 1, 2, 3, 4 ...) 
-- float (floating point numbers; 1.4, 4.29 3.39)
-- string (line of text, but try to think of it as an **array of characters**; "hello world" -> `['h','e','l','l','o',' ','w','o','r','l','d']`)
-- boolean (boolean algebra; True, False statements)
-
-I won't go over all of the intricacies but types are **very important.**
+- [int](#integers) (integers; like 1, 2, 3, 4 ...)
+- [float](#floats) (floating point numbers; 1.4, 4.29 3.39)
+- [string](#strings) (line of text)
+- [boolean](#booleans) (boolean algebra; True, False statements)
 
 When writing a program, knowing the types is the difference between your program succeeding, and failing
 to run. In other cases, using improper types can cause undesired output, or even crashes.
 
-Strings are the easiest and more common types we start with because it's the easiest to understand.
-Also: **Arrays**, we haven't covered this *yet*, but think of arrays as a **container** of data, with indexes pointing
+
+#### Integers
+Integers are just as they sound, numbers. 
+
+Integers are defined from going from -infinity to +infinity, and will be frequent in programming.
+
+In most languages there are 2 types of integers: signed and unsigned. 
+You don't need to know the complexities but it sounds exactly like how it does:
+
+one is 'signed' with positive and negative numbers, and the other is 'unsigned', which just only positive numbers are allowed.
+There is also the byte count which is how large the number can reach (8 bits, 16 bits, 32 bits, 64 bits, some languages even support 128 bits).
+
+**However, python only has one integer type, and almost no limits on it either.**
+
+*Python does have a partial limit of being able to print up to 4300 digits when converting integers to strings-- but that number is theoretically unlimited as you
+can technically increase that limit.
+
+#### Floats
+Floats are just decimal numbers, you can do math with integers with them, or with each other.
+
+Floats are going to be your biggest enemy and your biggest friend. They are also a total pain to deal with if they don't work as intended.
+
+If you want an example of why I think they're a pain, try doing this simple equation in idle or the python interpreter:
+```
+120.1-120
+answer=0.1 (super easy right?)
+```
+Here's what happens if you do that in python:
+
+```py
+# in the idle/python shell
+>>> 120.1-120
+0.09999999999999432
+```
+You should quickly notice that is not the right answer, and that happens because of what is described in this video [here.](https://www.youtube.com/watch?v=PZRI1IfStY0)
+
+Floats will be very painful if not handled properly, and you have to keep track of their precision-- this is actually language agnostic as well, meaning that most 
+programming languages suffer from this.
+
+
+AFAIK, there is no implementation to directly solve this python without you having to write extra code to ensure that the a result from a
+problem such as `120.1-120` is arithmetically correct. That isn't to say that there aren't workarounds to this issue. 
+
+You can mitigate this with tools that python provides, but note that this is an issue that has to do with how numbers are represented within a computer.
+
+
+#### Strings
+Strings are the easiest to identify and use, and we've used them in every assignment, and in `print()` statements already.
+
+I don't have much to say other than to try to think of them as an **array of characters**.
+
+For example the string: "hello world" should translate to this:
+```
+"hello world" = ['h','e','l','l','o',' ','w','o','r','l','d']
+```
+That might look confusing, but I promise you, this is how you should think of strings, because that is what strings are.
+
+We haven't covered this *yet*, but think of arrays as a **container** of data, with indexes pointing
 to different data types. In python it's called a **list**, and **arrays** are something different. So in an effort
 not to confuse you:
 
@@ -204,15 +260,15 @@ my_list=[1,2,3,4,5,6]
 ```
 In python, we do have specific arrays which can be invoked with:
 ```py
-import array as arr
-# we haven't learned any of this yet, so i won't say any more, but they function *similarly* to how they do in other languages.
+import array as arr # WHAT IS THIS?????? (we'll cover these later too...)
+
+# we haven't learned any of this yet, so i won't say any more, but they function *similarly* to lists, but are slightly more advanced.
 my_array=arr.array("hi!",1)
 ```
 If you want to read more on this check out this page from [GeeksForGeeks](https://www.geeksforgeeks.org/python/python-arrays/) I also used their example here to show you how an array is initialized.
 
 Strings are considered an 'array of characters' in almost all languages, meaning that you can do special things with strings,
 and when we get to that point in class, I'll update this document to help assist in understanding how arrays work.
-
 
 #### String concatenation and special characters
 As we have already discussed in class, we can print out and use `print()` in special ways to format our
@@ -243,25 +299,51 @@ string="hello! "
 cool_string=4*string
 print(cool_string)
 ```
-will print out:
+This code will print out:
 ```
 hello! hello! hello! hello! 
+```
+For some of the homework problems, you can actually use that to solve some of the problems, i.e. for my rocket ships
+I used a parameter to multiply the strings to allow the user to print more than two rockets if they wanted.
+
+The limit was up to their imagination...
+
+#### Booleans
+Easiest one: True or False statements.
+
+Python also supports the usage of expressions to represent boolean values, for example:
+
+```py
+print(1>2) # Output is false.
 
 ```
-For some of the homework problems, you can actually use that to solve some of the problems, i.e. the rocket ships.
+Boolean expressions are fundamentally the most important part of any programming language.
+They determine what is called "control flow", and I'll also write about this as we do cover this later in class.
 
-While I have to check with Dr.Ennaoui to see if it's ok to share answers to past homework problems, I really wish I could show
-you how I solved that and retroactively add my pseudocode to explain what exactly I was thinking when I analyzed that problem.
+Basically, all you need to know right now is that boolean means True or False, thats it, they can only be those 2 values.
 
-This might be a thing we do in class however, yet to see.
+If you're interested in the theory, it follows the logic of electric circuits. 1 being on, 0 being off.
+See this [crash course video](https://www.youtube.com/watch?v=gI-qXk7XojA) to understand the depths of booleans,
+although you should just keep note from the 3 minute point onwards.
 
 ## Functions
 
-I will also cover variables in this section, so this is gonna be a doozy.
-
 Functions are blocks of code in a function that either are called numerous times within your code OR added to help make your code more readable.
 It is best to try to reduce the amount of code you repeatedly write when programming because this code is easier to maintain and much easier to
-read overall. Here are some easy do's and don'ts when writing functions:
+read overall. 
+
+When it comes to programming, it is always best to make your code as *modular* as possible. What do I mean by that? I mean that when writing code, you 
+should always opt to make it so that if you need to reuse a portion of your code again in another section, or if you want to be able to reuse code, you
+should always try and plan ahead to determine what each function and part of your code does as to not cause yourself too much hassle in maintenance.
+
+This will be **EXTREMELY** important when we get to later chapters where we cover imports as well. If you are on the path to becoming a developer, you need to 
+learn how to write your code as compartmentalized and as readable as possible. You'll come to understand why that is extremely important in collaborative projects 
+if you ever get to that point in your career.
+
+I still struggle with this in my current projects, but understand that good code comes with a lot of practice and learning how to break problems up 
+properly will help you do that.
+
+Here are some easy do's and don'ts when writing functions:
 #### Do's
 - Compartmentalize your code; use functions to break your code into modular pieces that can be called individually.
 - Use functions as a way to reduce repeated patterns of code.
@@ -297,8 +379,21 @@ my_bool=True # is inferred as boolean, but also see my example below:
 my_other_bool=(my_float > my_integer) # this is also inferred as a boolean type!
 
 ```
+Something that will reduce future headaches is to immediately define a variable with a predefined type.
+You don't have to, but it will seriously help reduce headaches in much more complex and complicated programs.
+
+You would do that like this:
+```py
+my_int:int = 12
+
+```
+With something like this, it helps to read your code and keep track of variables, especially when you start having complex things happen to them, like throwing them through functions as parameters.
+
 #### Proper naming
 Functions and variables cannot start with certain keywords, characters, or generally numbers, this section will cover that.
+
+This guide from [Geeks4Geeks should also help](https://www.geeksforgeeks.org/python/what-are-the-allowed-characters-in-python-function-names/)
+
 Generally speaking, you should always try to name your functions as to what they specifically are as much as possible.
 A good example of this would be:
 
@@ -351,8 +446,10 @@ Special keywords include any key word that the python interpreter will not accep
 - `not` is one as well...
 - `for` is another keyword...
 - `def` is also another keyword...
+- so, so many more. see this list [here]()
 
-while you can use types as function names, it is generally not recommended as it messes with the actual data type and can redefine functionality.
+You may have noticed I didn't say any 'types'
+While you can use types as function names, it is generally not recommended as it messes with the actual data type and can redefine functionality.
 unless you are doing this for a very specific reason, it's best practice to not do that.
 
 ```py
