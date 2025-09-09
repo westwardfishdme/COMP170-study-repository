@@ -34,8 +34,8 @@ A little bit about me:
 - I have written highly intense software projects, most you can see on [my github page](https://github.com/westwardfishdme)
 although, I have kept some in private due to me not wanting to share all of my projects.
 - Currently, I am learning concurrent programming in Rust, which is very important for programming software for server/client models, hats off to you if you know that.
-- Although I have worked with python before in my youth, and it's been years since I've used the language but I still have
-a lot of experience in both writing it and reading it. 
+- Although I have worked with python before in my youth, and it's been years since I've used the language, I still have
+a lot of experience in both writing it and reading it statically. 
 
 Don't let that last point fool you! Once you master how to view patterns in programming languages, 
 you can see how knowledge overlaps between languages. The truth is, you can use any language to write
