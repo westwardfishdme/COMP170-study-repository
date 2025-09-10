@@ -12,6 +12,8 @@ non-textbook materials...
 - [Types](#basic-types)
 - [Functions](#functions)
 - [Variables](#variables)
+- [Expressions](#mathematics-expressions)
+- [Control Flow and If Statements](#control-flow)
 
 
 ## Introduction
@@ -553,5 +555,90 @@ unless you are doing this for a very specific reason, it's best practice to not 
 ```py
 def int(): # DONT DO THIS!!!
   pass # oooooh another secret keyword!
-``` 
+```
+
+## Input
+Python actually makes reading user input really easy. You can do this a numerous amount of ways,
+but for most beginners it's best interpretted by using the `input()` function. You can invoke
+`input()` by writing the following code:
+```py
+def ask_question():
+  my_answer=input(str("What is your favorite color?: "))
+  print("Your favorite color is:", my_answer)
+
+def main(): 
+  ask_question()
+
+main()
+```
+notice how I specified the type inside of the `input()` function:
+```py
+my_answer=input(str("What is your favorite color?: "))
+```
+This is normally how you will see people dictate the expected input of what the user inputs,
+and you can check the validity of user inputs with boolean logic, which I will cover in the next
+section on control flow.
+
+
+# Control Flow
+This section informs you on the control flow of python. Control flow is the process of handling
+logic within functions to procedurally handle conditions where you wish to produce certain output
+under certain conditions. It also dictates how your code is handled, and processed by your computer.
+
+## Logic
+Logic is the intricate details of booleans. Logic on computers is handled the same way you'll see on
+most electronics and electric circuits. We can handle if statements using logic and booleans to build
+our skills on control flow. 
+
+### Logic gates
+In python there are numerous keywords and special characters that you can use to 
+handle logic within your code to replicate the logic gates seen within electrical
+diagrams. 
+
+If you have played Minecraft for any amount of time, and have used redstone to
+build contraptions, it follows the same laws. Or if you have played around
+with electrical circuit diagrams, you would also know these by heart.
+
+These are the following logic gates and rules, I have also pointed out which one's you really
+need to know.
+- `and` << 
+- `or` << 
+- `xor` <<
+- `xnor`
+- `not` << **this is also a keyword in python, but there is a special way we notate this. 
+- `nand` 
+- `nor`
+- 
+## If-Elif Statements
+If and Elif Statements are your bread and butter in mastering control flow.
+These statements can **ONLY ACCEPT** boolean operations and expressions. 
+
+Say you have a program that asks a user what is their favorite color, and
+you have to design it such that
+
+
+# UNFINISHED SECTIONS.
+
+## Pass Statements
+
+## Match/Case Statements
+## Exit and Errors
+## Try/Except statements
+
+# Iterators, and Recursion
+## For loops
+## While loops
+## Recursion
+
+# Mathematics Expressions
+
+# Imports and using libraries
+## Using python's built-in libraries
+## Using self-defined libraries
+## Using PIP and 
+
+# Advanced Python
+## cython
+## Object Wrappers
+## Communicating to a larger ecosystem using JSON and STDOUT or STDIN
 
