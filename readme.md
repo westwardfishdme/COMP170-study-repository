@@ -17,7 +17,7 @@ Completed sections:
 - [Variables](#variables)
 - [Expressions](#mathematical-expressions)
 
-[User Input](#user-input)
+[User Input](#input)
 - [How to handle user input properly](#handling-user-input)
 
 [Control Flow](#control-flow)
@@ -27,7 +27,7 @@ Completed sections:
 
 The following sections are unfinished and will be appended to at a later date:
 
-- [Match/Case Statements](#match/case-statements)
+- [Match/Case Statements](#match-case-statements)
 - [Pass Statements]
 - [Exit and Errors]
 - [Try/Except statements]
@@ -227,7 +227,7 @@ print("This sentence was too long for me");print("so i used a semicolon for anot
 ```
 Syntax also includes proper indentation, fulfilling missing functions, and fulfilling missing keywords and their proper implementations.
 
-Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and [match/case](#match/case-statements)
+Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and [match/case](#match-case-statements)
 statements (also something we haven't covered yet, but it's like a special [if/then](#if-elif-statements) statement, i'll explain later.) 
 
 ## Basic-Types
