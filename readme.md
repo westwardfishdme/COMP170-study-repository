@@ -1,3 +1,4 @@
+
 # Westwardfishdme's Guide to succeeding to COMP170
 
 ## Content
@@ -14,14 +15,19 @@ Completed sections:
 - [Types](#basic-types)
 - [Functions](#functions)
 - [Variables](#variables)
-- [Expressions](#mathematics-expressions)
+- [Expressions](#mathematical-expressions)
+
+[User Input](#user-input)
+- [How to handle user input properly](#handling-user-input)
 
 [Control Flow](#control-flow)
 - [If-Elif Statements](#if-elif-statements)
 
+
+
 The following sections are unfinished and will be appended to at a later date:
 
-- [Match/Case Statements]
+- [Match/Case Statements](#match/case-statements)
 - [Pass Statements]
 - [Exit and Errors]
 - [Try/Except statements]
@@ -30,11 +36,6 @@ The following sections are unfinished and will be appended to at a later date:
 - [For loops]
 - [While loops]
 - [Recursion]
-
-[User Input]
-- [How to handle user input properly]
-- [Input Sanitization]
-- [Using errors to handle user input properly]
 
 [Imports and using libraries]
 - [Using python's built-in libraries]
@@ -45,6 +46,8 @@ The following sections are unfinished and will be appended to at a later date:
 - [ cython ]
 - [Object Wrappers]
 - [STDOUT/STDIN]
+- [Input Sanitization]
+- [Using errors to handle user input properly]
 
 
 ## Introduction
@@ -224,8 +227,8 @@ print("This sentence was too long for me");print("so i used a semicolon for anot
 ```
 Syntax also includes proper indentation, fulfilling missing functions, and fulfilling missing keywords and their proper implementations.
 
-Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and match/case
-statements (also something we haven't covered yet, but it's like a special `if/then` statement, i'll explain later.) 
+Indentation is the most important, as it dictates the control flow of functions, loops, if statements, and [match/case](#match/case-statements)
+statements (also something we haven't covered yet, but it's like a special [if/then](#if-elif-statements) statement, i'll explain later.) 
 
 ## Basic-Types
 So far in class, we have covered the following data types:
@@ -587,8 +590,88 @@ unless you are doing this for a very specific reason, it's best practice to not 
 def int(): # DONT DO THIS!!!
   pass # oooooh another secret keyword!
 ```
+## Mathematical Expressions
+In python you can use math. The general rule of PEMDAS is typically followed, but occasionally, 
+there are some weird exceptions to how math is performed in python.
 
-## Input
+Generally speaking, your operators are the following:
+- `({exp})` for parenthesis based values.
+- `**`      for exponents.
+- `%`       for modulation.
+- `/`       for division.
+- `//`      for floored division.
+- `*`       for multiplication.
+- `+`       for addition.
+- `-`       for subtraction.
+
+In addition the only two types of variables that can perform math is `int` and `float` respectively.
+Generally speaking, you can use them interchangeable, however it is to be noted that expressions 
+that use `float` variables will always return `float` answers.
+
+For example:
+```py
+>>> 1+2.0
+3.0
+```
+
+You can specifically cast the types if you wish to retain a specific type, for example:
+```py
+>>> int(1+2.0) # will always return an integer.
+3
+```
+There are also specific operations that will always return a specific answer. These operators are:
+- `/` will try and attempt to divide into an accurate float
+- `//` will always divide and return the floor value, e.g 
+```py
+>>> 4.4//2
+2.0
+```
+
+### Modulus (% operator)
+In this guide, I have to include a section on modulo because it is something that people aren't used to seeing be done as an operation,
+but nonetheless a **VERY** important operator. The best and easiest way to remember what modulo (`%`) does is that it returns the remainder.
+Think of it like a clock:
+
+```py
+>>> 13%5
+3
+# When I say think of it like a clock, it's because in a case like x%5=y,
+# y can only be in the range of (0,1,2,3,4)
+```
+So when you see something like `13%5`, try to see it like this:
+
+1. let our expression be `13%5`
+2. let us perform whole number division, and find the remainder.
+3. `13/5=2` with a remainder of `3`,
+4. Therefore `13%5` = `3`
+
+Another way you can visualize it is: how far away from the lowest possible result that isn't a float value be?
+
+1. let our expression be `265%100`
+2. our lowest possible correct result that would not be a `float` is `200`,
+3. we are `65` points away from `200`.
+4. Therefore `265%100` = `65`
+
+IMPORTANT TO NOTE:
+
+Modulation is similar to subtracting, but is NOT subtraction itself! You use modulation in a very different way in comparison.
+For example, a good example of this is like writing a clock function:
+```py
+
+def clock_from_secs(seconds_from_start):
+  if seconds_from_start > 3600:
+    # get the human readable time from something like 6534 seconds
+    seconds = seconds_from_start % 60 # gives us the seconds,
+    minutes = (seconds_from_start % 3600) / 60 # gives us the minutes.
+
+  print(str(minutes),"minutes",str(seconds),"seconds")
+```
+I have a few programs that utilize this algorithm in other languages, but this is python edition :3
+
+### Advanced mathematic expressions.
+for more advanced calculations, and math principles, we would have to use the [math module](#using-pythons-built-in-libraries) (not complete yet!)
+
+# Input
 Python actually makes reading user input really easy. You can do this a numerous amount of ways,
 but for most beginners it's best interpretted by using the `input()` function. You can invoke
 `input()` by writing the following code:
@@ -610,6 +693,54 @@ This is normally how you will see people dictate the expected input of what the 
 and you can check the validity of user inputs with boolean logic, which I will cover in the next
 section on control flow.
 
+## Handling User Input
+
+In your journey as a programmer, you will begin to learn why programmers hate user input.
+This section is kind of designed in a manner to explain how to handle some simple ways and
+thinking processes to better handle external inputs to your program.
+
+I say you will hate user input, because it is the most tedious, and most annoying thing a programmer
+has to deal with.
+
+The best way I can describe why it's such a pain is because of the following reasons:
+
+1. A user can input whatever the hell they want.
+2. Because a user can put in whatever the hell they want, they can easily crash the program, or introduce bugs you will have to go back and fix.
+3. This process usually involves hours upon hours of rewriting numerous lines of code, or hours of variable tracking to figure out exactly where 
+these bugs occur. Thus inducing so many migraines in the process.
+
+Generally speaking, you want to treat user input with as little trust as possible, and install the most amount of safeguards possible. Especially in a
+language like python because of how variable types are handled with very little pre-emptive definition. What does that mean?
+
+```py
+# say we ask a user for a number.
+user_num=int(input("give me a number!: "))
+# they put in 'three...'
+```
+Now the whole program goes kaput!
+
+Now there are mitigations, and once we get to [try/except statements](#try/except-statements) we will cover how we can leverage `try/except` statements to better
+handle user inputs.
+
+Specifically this gives a ValueError where the type String cannot be parsed into an integer, which we'll cover in the section titled [Exit and Errors](#exit-and-errors)
+which is incomplete at this moment...
+
+Also, it is best to use `case` modifiers for strings such as `.lower()` or `.upper()` to better handle user input, regardless of what the user inputs.
+
+For example, in some snippets of code you might see me do something like:
+```py
+my_string="westwardfishdme"
+some_string="I LOVE ICE CREAM"
+
+# make my_string all upper case
+print(my_string.upper())
+# make some_string all lower case
+print(some_string.lower())
+
+```
+
+Using case modifiers makes handling boolean values all that much easier, because you don't have to worry if your user puts in some funky text, because your
+program will automatically set it to either all `lowercase` or all `uppercase`.
 
 # Control Flow
 This section informs you on the control flow of python. Control flow is the process of handling
@@ -671,7 +802,6 @@ Another acceptable, and honestly a much more readable rewrite might look like th
 def check_color(color):
   # say i like blue as much as red...
   if color == "red" or color == "blue":
-    print("That's my favorite color too!")
   else:
     print("I guess we can have different opinions, but I don't like that color.")
 
@@ -707,7 +837,10 @@ if m==1 or 2:
 ```
 
 
+
 # UNFINISHED SECTIONS.
+
+
 
 ## Pass Statements
 
@@ -720,12 +853,11 @@ if m==1 or 2:
 ## While loops
 ## Recursion
 
-# Mathematics Expressions
 
 # Imports and using libraries
 ## Using python's built-in libraries
 ## Using self-defined libraries
-## Using PIP and 
+## Using PIP and external python libraries.
 
 # Advanced Python
 ## cython
