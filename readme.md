@@ -10,6 +10,7 @@ Completed sections:
 
 [A comprehensive guide to the class](#the-guide-for-comp170)
 
+[Python Basics]
 - [The `print()` function](#print)
 - [Proper syntax](#syntax)
 - [Types](#basic-types)
@@ -21,6 +22,7 @@ Completed sections:
 - [How to handle user input properly](#handling-user-input)
 
 [Control Flow](#control-flow)
+- [Logic in Python](#logic)
 - [If-Elif Statements](#if-elif-statements)
 
 
@@ -131,13 +133,42 @@ are truly interested in programming, these are some books that I had read and vi
 
 **LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER**
 
+This specific section is dedicated in providing resources to help learn how to think like a programmer, and very specific to
+learning how to program, and think like a programmer. You might notice that some content creators kinda sh*t on academia, but
+that's because for the most part, programming is a skill that most really great programmers learn how to do on their own time.
+
+It does breed this toxic culture, but I'm neither here nor there on how someone learns concepts. I think that academia provides
+people with a great framework to learn these concepts, but to really solidify knowledge, I would take a listen to what people
+say who learned how to program independently, as they *typically* have better inputs, but that is not always the case.
+
 - [Fireship's wonderful video on how you should learn how to code](https://www.youtube.com/watch?v=NtfbWkxJTHw)
+
+This video does a wonderful job in introducing programming concepts, and I think helps build some concepts in your journey as a programmer.
+- [Crin's wonderful video on how to learn how to programming](https://www.youtube.com/watch?v=kNareBFFWtQ)
+
+Same as the video above, but from another content creator's perspective :3
 - [NetworkChuck's playlist on coding in python](https://www.youtube.com/watch?v=mRMmlo_Uqcs&list=PLIhvC56v63ILPDA2DQBv0IKzqsWTZxCkp)
+
+I would use this playlist as a way to help solidify what we learn in the course. 
 - [Coding is easy, actually](https://www.youtube.com/watch?v=qkFYqY3vr84)
+
+Same as the first 2 videos.
 - [GeeksForGeeks Python Tutorial Module](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/) << this is how i learned python when i was young.
+
+G4G is the programmers best friend, I'm not joking Geeks4Geeks will carry you in learning any concept. It's user guided, and explains concepts with details.
 - [How to Read Documentation Effectively](https://www.youtube.com/watch?v=q0trIfryGvY)
+
+I would use this video once you get more advanced in python, but this is a language agnostic concept
+that I think serves the purpose of learning very well.
 - [Official Python Documentation](https://docs.python.org/3/tutorial/index.html)
+
+This is the official Python documentation. I know for beginners you will look at this and think "WTF is this?" but I promise you 
+official documentation of any language will be necessary in not only understanding what is happening under the hood, but better
+conceptualize what certain functions and modules do.
 - [5 Good Python Habits](https://www.youtube.com/watch?v=I72uD8ED73U)
+
+Use this video to help organize your code better. I'm not even kidding the #1 career-killer in programming is
+having extremely disorganized, vague, and error-prone code. 
 
 **Topics/Wiki articles you should study to help you succeed in programming**
 
@@ -151,17 +182,36 @@ These articles aren't Python Specific, but I highly recommend you read them.
 
 
 **BOOKS UNRELATED TO THE COURSE THAT I THINK YOU SHOULD CHECK OUT**
+
+I love reading, but I understand that reading is not for everyone, if you are heavily invested into computers, computer science in general,
+or want to build better programming skills, I would check out some of these books
+
 - [The Hacker Ethic and the Spirit of the Information Age](https://archive.org/details/TheHackerEthicAndTheSpiritOfTheInformationAge)
+
+The book on the Hacker Ethic isn't just necessarily pertaining to computer 'hacking' but is rather a change in mindset to how one accomplishes
+their goals through their principles. This video from [14 years ago synthesizes the essence of the book pretty eloquently.](https://www.youtube.com/watch?v=l6iMdsey4uI)
+
 - [Algorithms - Panos Louridas](https://www.amazon.com/Algorithms-MIT-Press-Essential-Knowledge/dp/0262539020)
+
+I read this book a few years back, but to summarize it-- the matter of algorithmically thinking is such an important skill
+in today's world. It kind of just gives the reader some basic ideas of what algorithms are, and how someone with an algorithmically-thinking 
+brain will tackle such problems.
 - [The C Programming Language](https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/C_Book_2nd.pdf)
 
+So the C programming language itself is not something that we cover in this course specifically, but C is such a fundamental language in
+computing, that NOT reading it or knowing about it will be extremely detrimental in your career as a programmer as most languages are either
+based or written in C (such as python, which uses C in it's backend)
+
+If you don't want to read a whole other book, which I totally understand, you can either check out the wikipedia article [here](https://en.wikipedia.org/wiki/C_(programming_language))
+or this video of why C is so important [from computerphile here.](https://www.youtube.com/watch?v=ci1PJexnfNE)
+
+### In summary...
 You don't have to check these videos or articles out at all, but they do help reinforce REALLY good learning habits when it comes to programming,
 they were videos that I have sent out to my friends who have asked me how to learn how to program, and it's helped them in their careers.
 
-The book on the hacker ethic isn't just necessarily pertaining to computer 'hacking' but is rather a change in mindset to how one accomplishes
-their goals through their principles. This video from [14 years ago synthesizes the essence of the book pretty eloquently.](https://www.youtube.com/watch?v=l6iMdsey4uI)
- 
 # The Guide for COMP170
+
+# Python Basics
 ## Print 
 In almost every programming language, there are ways to output messages or as we'll learn later, 
 variables to the screen this is almost always called `print`, but some languages will have a slightly
