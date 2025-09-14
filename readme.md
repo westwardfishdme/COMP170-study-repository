@@ -10,7 +10,7 @@ Completed sections:
 
 [A comprehensive guide to the class](#the-guide-for-comp170)
 
-[Python Basics]
+[Python Basics](#python-basics)
 - [The `print()` function](#print)
 - [Proper syntax](#syntax)
 - [Types](#basic-types)
