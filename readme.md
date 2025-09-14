@@ -5,6 +5,8 @@ non-textbook materials...
 - [Introduction](#introduction)
 - [Useful Misc. Youtube Videos](#miscellaneous-videos-and-other-learning-resources)
 
+Completed sections:
+
 [A comprehensive guide to the class](#the-guide-for-comp170)
 
 - [The `print()` function](#print)
@@ -13,7 +15,36 @@ non-textbook materials...
 - [Functions](#functions)
 - [Variables](#variables)
 - [Expressions](#mathematics-expressions)
-- [Control Flow and If Statements](#control-flow)
+
+[Control Flow](#control-flow)
+- [If-Elif Statements](#if-elif-statements)
+
+The following sections are unfinished and will be appended to at a later date:
+
+- [Match/Case Statements]
+- [Pass Statements]
+- [Exit and Errors]
+- [Try/Except statements]
+
+[Iterators, and Recursion]
+- [For loops]
+- [While loops]
+- [Recursion]
+
+[User Input]
+- [How to handle user input properly]
+- [Input Sanitization]
+- [Using errors to handle user input properly]
+
+[Imports and using libraries]
+- [Using python's built-in libraries]
+- [Using self-defined libraries]
+- [Using pip to install libraries]
+
+- [Advanced Python]
+- [ cython ]
+- [Object Wrappers]
+- [STDOUT/STDIN]
 
 
 ## Introduction
@@ -608,13 +639,72 @@ need to know.
 - `not` << **this is also a keyword in python, but there is a special way we notate this. 
 - `nand` 
 - `nor`
-- 
+
 ## If-Elif Statements
 If and Elif Statements are your bread and butter in mastering control flow.
 These statements can **ONLY ACCEPT** boolean operations and expressions. 
 
 Say you have a program that asks a user what is their favorite color, and
-you have to design it such that
+you have to design it such that your program checks whether or not they inputted
+a specific value. Here would be an acceptable use for an `if/elif` statement:
+
+For example, you might write code that looks like this:
+```py
+def check_color(color):
+  # in the case, where I like blue but not as much as I do red...
+  if color == "red":
+    print("That's my favorite color too!")
+  elif color == "blue":
+    print("I guess thats an ok color, its not my favorite but I like it!")
+  else:
+    print("I guess we can have different opinions, but I don't like that color.")
+
+def main():
+  color=str(input("what is your favorite color?: "))
+  # note that i add the .lower() to make sure the user's input is set to lowercase.
+  check_color(color.lower()) 
+
+main()
+```
+Another acceptable, and honestly a much more readable rewrite might look like this:
+```py
+def check_color(color):
+  # say i like blue as much as red...
+  if color == "red" or color == "blue":
+    print("That's my favorite color too!")
+  else:
+    print("I guess we can have different opinions, but I don't like that color.")
+
+def main():
+  color=str(input("what is your favorite color?: "))
+  check_color(color.lower()) 
+
+main()
+```
+**Note:**
+
+For statements where you use the keywords `or`, `and`, `is`, and `not` YOU
+MUST format it such that you are comparing two or more separate complete
+boolean expressions.
+
+For example, you want to generally format it such that it looks like this:
+```py
+# WRITE IT LIKE THIS:
+# you don't need to add the parentheses, but
+# I included them because it makes it slightly
+# more readable.
+
+if (m==1) or (m==2):
+  # do something...
+
+
+# DO NOT WRITE EXPRESSIONS LIKE THIS, THIS WILL BE A LOGICAL BUG.
+# Meaning that it will run, but "2" is a literal,
+# meaning that it will always return true...
+
+if m==1 or 2:
+  #this will always run, regardless of the value of m.
+```
 
 
 # UNFINISHED SECTIONS.
