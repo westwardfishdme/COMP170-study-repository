@@ -131,7 +131,7 @@ With that said, I hope this guide serves you well, and you find this easy to lea
 Here are some other resources you should check out to help study and learn, these aren't necessary, but if you
 are truly interested in programming, these are some books that I had read and videos 
 
-**LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER**
+### LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER
 
 This specific section is dedicated in providing resources to help learn how to think like a programmer, and very specific to
 learning how to program, and think like a programmer. You might notice that some content creators kinda sh*t on academia, but
@@ -170,7 +170,7 @@ conceptualize what certain functions and modules do.
 Use this video to help organize your code better. I'm not even kidding the #1 career-killer in programming is
 having extremely disorganized, vague, and error-prone code. 
 
-**Topics/Wiki articles you should study to help you succeed in programming**
+### Topics/Wiki articles you should study to help you succeed in programming
 
 These articles aren't Python Specific, but I highly recommend you read them.
 
@@ -181,7 +181,7 @@ These articles aren't Python Specific, but I highly recommend you read them.
 - [What is Pattern-Based Thinking?](https://www.knapsack.cloud/blog/pattern-based-thinking)
 
 
-**BOOKS UNRELATED TO THE COURSE THAT I THINK YOU SHOULD CHECK OUT**
+### BOOKS UNRELATED TO THE COURSE THAT I THINK YOU SHOULD CHECK OUT
 
 I love reading, but I understand that reading is not for everyone, if you are heavily invested into computers, computer science in general,
 or want to build better programming skills, I would check out some of these books
