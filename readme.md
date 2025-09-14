@@ -852,6 +852,7 @@ Another acceptable, and honestly a much more readable rewrite might look like th
 def check_color(color):
   # say i like blue as much as red...
   if color == "red" or color == "blue":
+    print(f"I love the color {color} too!")
   else:
     print("I guess we can have different opinions, but I don't like that color.")
 
