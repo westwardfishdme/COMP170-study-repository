@@ -886,20 +886,125 @@ if (m==1) or (m==2):
 if m==1 or 2:
   #this will always run, regardless of the value of m.
 ```
+## Match-Case Statements
+Match-case statements are a more comprehensive form of If-Elif statements that does exactly as it sounds.
+Sometimes when we are programming, we have to actually write code that takes an input and we have to
+build based around the context of the user. Say you had to work on a project where there a ton of conditions
+that need to be met for the variable `name` and you had to check if their name was either `jonathan, kyle, or miranda`.
+
+Would you rather parse code that looks like this:
+```py
+if name=="jonathan":
+  print(f"hello {name}, cool name!")
+elif name=="kyle":
+  print(f"hello {name}, do you drink monster energy by chance?")
+elif name=="miranda":
+  print(f"hello {name}, you share the same name as the iCarly actor!")
+else:
+  print(f"Oh, {name}. I don't know you!")
+```
+or code that looks like this:
+```py
+match name:
+  case "jonathan":
+    print(f"hello {name}, cool name!")
+  case "kyle":
+    print(f"hello {name}, do you drink monster energy by chance?")
+  case "miranda": 
+    print(f"hello {name}, you share the same name as the iCarly actor!")
+  case _: # this is like our else statement,
+    print(f"Oh, {name}. I don't know you!")
+```
+Typically in a software development environment, it is preferred to write logic based on match/case statements rather
+than if/else statements **IF POSSIBLE.**
+
+You won't always have the opportunity to use match/case statements, but if you HAVE to use an if statement,
+try to use them as minimally of them as you possibly can.
 
 
 
 # UNFINISHED SECTIONS.
 
-## Pass Statements
-
-## Match-Case Statements
+# unfinished control flow.
 ## Exit and Errors
 ## Try/Except statements
 
 # Iterators, and Recursion
 ## For loops
+If `if/elif` statements are your bread and butter for control flow, them `for` loops is your Swiss Army Knife in control flow operations. You can use them to do
+repetitive tasks where you need to complete a specific **iteration**, or better yet, as I like to describe it: "a pattern of operations".
+
+For example, say we need to write a function that tells us specifically to create a pattern of 10 hello's, but on the 7th hello, we print out a special message.
+
+```py
+# here specifically, i use the range modifier with a single argument/parameter 10.
+for i in range(10):
+  print("hello!")
+  if i == 7:
+    print("hello from iteration:",str(i))
+```
+This is a very basic form of a for loop, but essentially anything within the indentation of the for loop gets repeated procedurally.
+Note: When you inevitably learn O notation ("Big O notation" as it's colloquially called) you'll learn when iterators are both detrimental,
+necessary, and acceptable cases. Typically, you don't want to nest for loops as seen below:
+```py
+for i in range(30):
+  for j in range(30):
+    #do complex code things
+    pass
+
+```
+For something like this it is best advised to consult all other possible ways to solve this as it can get very slow and messy fast--
+This particular algorithm runs in `O(30n^2)`. Thats because as you can guess we are calling the inner for loop `for j in range(30)`
+every time we iterate through the outer loop `for i in range(30)` so as you can imagine this not only would hog up resources in its complex
+calculations, but also be extremely inefficient. However, it is not always the case that we can escape something like this, but there are alternatives.
+
+I can't list any specific examples at the moment, but you can find some on [leetcode](https://leetcode.com) if you want some more practice on O notation.
 ## While loops
+Honestly, these are the same as for loops, but will iterate until the statement provided is false. For example:
+```py
+def main():
+  i=30
+  j=0
+  while (i >= j):
+    print(i+j) #would count from 30 to 60
+```
+
+## Pass Statements, and break
+Breaks and Pass statements are essentially just special keyword statements that allow you to do nothing in a control flow statement, or break out of a loop;
+
+Breaks (`break`) are useful for breaking out of a `for` or `while` loop once a specific condition is met. `pass` statements literally do nothing, but just because
+they do nothing, it is unwise to doubt the power of a `pass` statement.
+
+Pass statements are **ESPECIALLY** useful when handling **errors**, or catching faulty logic. For example:
+
+```py
+def countfrom(x:int, y:int):
+  return int(x+y) 
+  # in normal python, there would just be a string concatenation, 
+  # but since we specify that we are casting a string to an int,
+  # this program will give a TypeError error, and crash out.
+
+def main():
+  try: # check out try/except statements, will be posted later.
+    print("we sucessfully performed the function countfrom()")
+    print(countfrom("we", 2))
+  except TypeError:
+    print("we hit an error: TypeError")
+    pass 
+    # the pass statement will just pretend like nothing happened.
+    # and the program will continue. Had we not inserted this here, 
+    # the program would just fail and crash.
+
+  print("Main has completed.") #<< this line is now reachable.
+
+main()
+```
+
+We can use `break` in a similar fashion, but we usually use in programming to
+stop a loop when certain logical conditions are met. 
+
+Generally speaking, use `pass` and `break` as liberally as possible, but use
+them as tools specific to their best use application.
 ## Recursion
 
 
