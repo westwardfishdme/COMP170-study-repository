@@ -133,8 +133,8 @@ are truly interested in programming, these are some books that I had read and vi
 
 ### LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER
 
-This specific section is dedicated in providing resources to help learn how to think like a programmer, and very specific to
-learning how to program, and think like a programmer. You might notice that some content creators kinda sh*t on academia, but
+This specific section is dedicated in providing resources to help learn how to think like a programmer, and build foundational
+principles for learning. You might notice that some content creators kinda sh*t on academia, but
 that's because for the most part, programming is a skill that most really great programmers learn how to do on their own time.
 
 It does breed this toxic culture, but I'm neither here nor there on how someone learns concepts. I think that academia provides
