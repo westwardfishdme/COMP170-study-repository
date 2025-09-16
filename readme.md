@@ -1021,6 +1021,7 @@ def factorial(x):
 see how in the definition of the function, it calls itself? That's what recursion is.
 
 Check out more from the wikipedia article [here](https://en.wikipedia.org/wiki/Recursion#In_computer_science)
+
 To see more about recursive vs. iterative, [read this](https://edward-huang.com/2021/02/17/is-recursion-really-slower-than-iteration/)
 
 
