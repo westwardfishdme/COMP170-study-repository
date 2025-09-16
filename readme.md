@@ -24,20 +24,19 @@ Completed sections:
 [Control Flow](#control-flow)
 - [Logic in Python](#logic)
 - [If-Elif Statements](#if-elif-statements)
+- [Match/Case Statements](#match-case-statements)
+- [Pass Statements](#pass-and-break-statements)
+[Iterators, and Recursion](#iterators-and-recursion)
+- [For loops](#for-loops)
+- [While loops](#while-loops)
+- [Recursion](#recursion)
 
 
 
 The following sections are unfinished and will be appended to at a later date:
 
-- [Match/Case Statements](#match-case-statements)
-- [Pass Statements]
 - [Exit and Errors]
 - [Try/Except statements]
-
-[Iterators, and Recursion]
-- [For loops]
-- [While loops]
-- [Recursion]
 
 [Imports and using libraries]
 - [Using python's built-in libraries]
@@ -921,15 +920,7 @@ than if/else statements **IF POSSIBLE.**
 You won't always have the opportunity to use match/case statements, but if you HAVE to use an if statement,
 try to use them as minimally of them as you possibly can.
 
-
-
-# UNFINISHED SECTIONS.
-
-# unfinished control flow.
-## Exit and Errors
-## Try/Except statements
-
-# Iterators, and Recursion
+# Iterators and Recursion
 ## For loops
 If `if/elif` statements are your bread and butter for control flow, them `for` loops is your Swiss Army Knife in control flow operations. You can use them to do
 repetitive tasks where you need to complete a specific **iteration**, or better yet, as I like to describe it: "a pattern of operations".
@@ -969,7 +960,7 @@ def main():
     print(i+j) #would count from 30 to 60
 ```
 
-## Pass Statements, and break
+## Pass and Break Statements
 Breaks and Pass statements are essentially just special keyword statements that allow you to do nothing in a control flow statement, or break out of a loop;
 
 Breaks (`break`) are useful for breaking out of a `for` or `while` loop once a specific condition is met. `pass` statements literally do nothing, but just because
@@ -1005,7 +996,39 @@ stop a loop when certain logical conditions are met.
 
 Generally speaking, use `pass` and `break` as liberally as possible, but use
 them as tools specific to their best use application.
+
+Ideally in situations where we want to break out of a function all together if something fails, we can also just call
+`return`.
+
 ## Recursion
+Now that you kind of understand how to use pass and break functions, you can use them in recursive functions.
+Now the thing about recursive functions it is rather complicated, and honestly not that much different from iteratable
+functions, but they are very different in terms of efficiency and performance. Generally speaking, recursive functions
+can be useful in certain scenarios or for code reading, but keep in mind that you are calling a function numerous times
+which causes an increase in memory use each time-- so be wary!
+
+What is a recursive function? Pretty much a function that calls itself:
+
+```py
+# this is an example from wikipedia, which i suggest you check out.
+def factorial(x):
+  if x > 0:
+    return n * factorial(x - 1)
+  else:
+    return 1
+```
+see how in the definition of the function, it calls itself? That's what recursion is.
+
+Check out more from the wikipedia article [here](https://en.wikipedia.org/wiki/Recursion#In_computer_science)
+To see more about recursive vs. iterative, [read this](https://edward-huang.com/2021/02/17/is-recursion-really-slower-than-iteration/)
+
+
+# UNFINISHED SECTIONS.
+
+# unfinished control flow.
+## Exit and Errors
+## Try/Except statements
+
 
 
 # Imports and using libraries
