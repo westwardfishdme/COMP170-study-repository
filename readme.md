@@ -26,6 +26,7 @@ Completed sections:
 - [If-Elif Statements](#if-elif-statements)
 - [Match/Case Statements](#match-case-statements)
 - [Pass Statements](#pass-and-break-statements)
+
 [Iterators, and Recursion](#iterators-and-recursion)
 - [For loops](#for-loops)
 - [While loops](#while-loops)
