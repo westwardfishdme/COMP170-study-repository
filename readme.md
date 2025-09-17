@@ -960,6 +960,39 @@ def main():
   while (i >= j):
     print(i+j) #would count from 30 to 60
 ```
+you can use while loops the same as for loops, but you can never use a for loop the same as a while loop. It's like that square can be a rectangle 
+argument "a square can be a rectangle, but a rectangle never a square".
+
+Typically, when you're developing some software, you either declare initially what conditions will `break` the loop inside of the parameters.
+```py
+# for example:
+while(x>y): 
+  #do something...
+  pass 
+```
+If you have multiple conditions that can break your loop, it is best practice to do a `while(True)` loop and then use either an `if/elif` statement
+or better yet, use a `match/case` statement, for example:
+```py
+
+def main():
+  while(True):
+    print("If these conditions aren't met, I will run forever!")
+    condition=str(input("What is your favorite pizza topping?: "))
+
+    if condition == "": # if blank break the loop return to main()
+      break
+
+    match condition.lower:
+      case "pepperoni":
+        print("Love that topping!")
+      case "cheese":
+        print("That's pretty meh, but ok.")
+      case _:
+        print(f"Sorry, im not a big fan of {condition.lower()}")
+
+  print("in main")
+
+```
 
 ## Pass and Break Statements
 Breaks and Pass statements are essentially just special keyword statements that allow you to do nothing in a control flow statement, or break out of a loop;
