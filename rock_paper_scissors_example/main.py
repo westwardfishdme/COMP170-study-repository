@@ -8,6 +8,12 @@ about, but not really need to practice right now.
 from random import randint
 from re import findall as regex
 
+# we also need to get the PatternError for try/except
+from re import PatternError
+# we use our special errors file to print to STDERR
+# should we run into any errors to log
+from errors import eprint
+
 
 class UserInput:
     """
@@ -24,7 +30,7 @@ class UserInput:
     """
 
     def __init__(self):
-        self.choice = str(input("What is your choice?: ")).lower()
+        self.choice = str(input("\nWhat is your choice?: ")).lower()
         if self.choice == "q" or self.choice == "quit":
             exit(0)
 
@@ -34,9 +40,13 @@ class UserInput:
         # we use a ReGEX to check if the string contains
         # the user's substring...
         for option in valid_opts:
-            if regex(self.choice, option):
-                print(f"you meant {option}!")
-                return option
+            try:
+                if regex(self.choice, option):
+                    print(f"you meant {option}!")
+                    return option
+            except PatternError:
+                eprint("regex ran into an error!: PatternError")
+                break
         print("i could not find a valid option!")
 
 
