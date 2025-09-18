@@ -14,6 +14,8 @@ In this little pet project that I wrote, you can check out how to do the followi
   - Using regex (REGular EXpressions) to find close matches to a word in a list.
   - Using rand (Not cryptographically secure!) to generate random numbers to 
 5. Checking user input.
+  - Try/Except error handling inside of the interpret() method to catch any errors; mostly just
+  errors like: pressing the directional arrows on the keyboard, stuff like that.
   - Note: I did not implement Control Code statements (things like Ctrl-C (^C), or Ctrl-D(^D)),
   so there will be some error messages if you try to kill the program using SIGINT or SIGKILL
   codes!
