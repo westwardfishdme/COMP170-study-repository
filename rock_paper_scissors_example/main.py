@@ -13,12 +13,14 @@ class UserInput:
     """
      When we call UserInput without a method, we will always
      run all code inside of the:
-     def__init__(self):
+     def __init__(self):
 
      so for example, say we have:
 
-     user_in=UserInput(), 
-     our code will run.
+     >> user_in=UserInput(),
+
+     our code inside of our `def __init__(self)` will run
+     first.
     """
 
     def __init__(self):
