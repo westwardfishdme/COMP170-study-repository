@@ -10,6 +10,17 @@ from re import findall as regex
 
 
 class UserInput:
+    """
+     When we call UserInput without a method, we will always
+     run all code inside of the:
+     def__init__(self):
+
+     so for example, say we have:
+
+     user_in=UserInput(), 
+     our code will run.
+    """
+
     def __init__(self):
         self.choice = str(input("What is your choice?: ")).lower()
         if self.choice == "q" or self.choice == "quit":
@@ -27,6 +38,7 @@ class UserInput:
         print("i could not find a valid option!")
 
 
+# the WinResult class will hold our score
 class WinResult:
     win = 0
     lose = 0
@@ -45,12 +57,12 @@ def opponentsChoice(valid_opts: list) -> str:
     # in the future, we want to add something to that list,
     # say... a rocket launcher we can!
     size_rps = valid_opts.__len__()-1
-    choice = randint(0, size_rps)
+    cpuidx_choice = randint(0, size_rps)
     print("\nI have made my choice, and I don't think you can guess what it is!")
 
     # we return a random choice from valid_opts
     # by using the integer as our index
-    return valid_opts[choice]
+    return valid_opts[cpuidx_choice]
 
 
 def validate(user_choice: str, cpu_choice: str) -> ():
@@ -83,6 +95,7 @@ def validate(user_choice: str, cpu_choice: str) -> ():
                 return
 
 
+# = lets run some code! = #
 def main():
     total_games = 0
     valid_opts = ["rock", "paper", "scissors"]
@@ -97,6 +110,7 @@ def main():
 
     while (total_games < 3):
 
+        # in order to use our methods, we have to call our UserInput class
         input = UserInput()
         cpu = opponentsChoice(valid_opts)
 
@@ -146,3 +160,13 @@ NOTES:
 
 # there are some cases where you need to store that information in memory,
 # but the general idea is that if you can-- do it at a good time
+
+
+# Additionally, instead of a list:
+"""
+e.g.
+["rock","paper","scissors"]
+"""
+# a professional developer might use something
+# called a  'config' file or any other external file
+# so that the values are not hard coded into the game!
