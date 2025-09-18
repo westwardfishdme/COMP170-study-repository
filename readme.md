@@ -461,8 +461,8 @@ Here are some easy do's and don'ts when writing functions:
 - Use functions as a way to reduce repeated patterns of code.
 - Name your functions and parameters accurately, avoid vague naming schemas.
 - If possible, give your functions a return type, being able to pass variables into functions and printing out the result of a function is a very
-useful skill and tool that will be important in your journey. In my example program, I show how this is done to eloquently print out a user's name
-and greet them with using only a function. 
+useful skill and tool that will be important in your journey. In my [example program](rock_paper_scissors_example/), I show how this is done to store the result of the computer randomly
+choosing an index to return a string. 
 
 #### Don'ts
 - Write functions that aren't used in your program; this is called 'dead code' and is considered a waste of resources.
@@ -811,8 +811,8 @@ If you have played Minecraft for any amount of time, and have used redstone to
 build contraptions, it follows the same laws. Or if you have played around
 with electrical circuit diagrams, you would also know these by heart.
 
-These are the following logic gates and rules, I have also pointed out which one's you really
-need to know.
+These are the following boolean operators that perform logic gates and rules, 
+I have also pointed out which one's you really need to know.
 - `and` << 
 - `or` << 
 - `xor` <<
@@ -843,6 +843,27 @@ def check_color(color):
 def main():
   color=str(input("what is your favorite color?: "))
   # note that i add the .lower() to make sure the user's input is set to lowercase.
+  check_color(color.lower()) 
+
+main()
+```
+Sometimes, you want the output of that inner function to be something similar or performed
+the exact same way. This is when we use **boolean operators.**
+
+```py
+# We don't want something like this:
+
+def check_color(color):
+  # say i like blue as much as red...
+  if color == "red"
+    print("I love the color red too!")
+  elif color == "blue":
+    print("I love the color blue too!")
+  else:
+    print("I guess we can have different opinions, but I don't like that color.")
+
+def main():
+  color=str(input("what is your favorite color?: "))
   check_color(color.lower()) 
 
 main()
