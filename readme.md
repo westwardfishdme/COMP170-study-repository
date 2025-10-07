@@ -44,12 +44,20 @@ The following sections are unfinished and will be appended to at a later date:
 - [Using self-defined libraries]
 - [Using pip to install libraries]
 
-- [Advanced Python]
-- [ cython ]
+[Methods, and Classes](#methods-and-classes)
+- [What is a method?]
+- [Python classes]
+- [Class Attributes]
+- [Writing custom objects]
+
+
+[Advanced Python]
+- [STDOUT/STDIN/STDERR]
+- [Writing code to interact with APIs]
+- [Asynchronous python]
 - [Object Wrappers]
-- [STDOUT/STDIN]
+- [cython]
 - [Input Sanitization]
-- [Using errors to handle user input properly]
 
 
 ## Introduction
