@@ -33,11 +33,11 @@ Completed sections:
 - [Recursion](#recursion)
 
 
+[Error Handling](#error-handling)
+- [Exit and Errors](#exit-and-errors)
+- [Try/Except statements](#try-except-and-finally-statements)
 
 The following sections are unfinished and will be appended to at a later date:
-
-- [Exit and Errors]
-- [Try/Except statements]
 
 [Imports and using libraries]
 - [Using python's built-in libraries]
@@ -1079,6 +1079,8 @@ Check out more from the wikipedia article [here](https://en.wikipedia.org/wiki/R
 To see more about recursive vs. iterative, [read this](https://edward-huang.com/2021/02/17/is-recursion-really-slower-than-iteration/)
 
 
+# Error Handling
+
 ## Exit and Errors
 As a new developer, you probably have already run into these. Reading errors is rather quite scary, BUT you can actually levy 
 errors to your advantage. Take this example program as an example:
@@ -1137,7 +1139,7 @@ main(): line 14 had an error
 Because this datatype error occurs, we actually get the error code from the interpreter:
 `TypeError: can only concatenate str (not "int") to str` 
 
-## Try/Except/Finally statements
+## Try, Except, and Finally statements
 
 Now that we know how to read errors, we can actually write robust code called Try/Except statements.
 In other languages, this might be called try/catch, or you might not have these at all. Most Object
