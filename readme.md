@@ -1079,13 +1079,137 @@ Check out more from the wikipedia article [here](https://en.wikipedia.org/wiki/R
 To see more about recursive vs. iterative, [read this](https://edward-huang.com/2021/02/17/is-recursion-really-slower-than-iteration/)
 
 
-# UNFINISHED SECTIONS.
-
-# unfinished control flow.
 ## Exit and Errors
-## Try/Except statements
+As a new developer, you probably have already run into these. Reading errors is rather quite scary, BUT you can actually levy 
+errors to your advantage. Take this example program as an example:
+
+```py
+def cause_error():
+    this = "this"
+    will = "will"
+    fail = 3
+    print(this, will+fail)
 
 
+def main():
+    print("hello world!")
+    cause_error()
+
+
+
+if __name__ == "__main__":
+    main()
+```
+This will cause a `TypeError` error, as we are trying to concatenate the string `will` with the integer `fail`.
+
+```
+Traceback (most recent call last):
+  File "/home/withoutdishonor/programming/high/python/141/COMP170-study-repository/fail.py", line 14, in <module>
+    main()
+    ~~~~^^
+  File "/home/withoutdishonor/programming/high/python/141/COMP170-study-repository/fail.py", line 10, in main
+    cause_error()
+    ~~~~~~~~~~~^^
+  File "/home/withoutdishonor/programming/high/python/141/COMP170-study-repository/fail.py", line 5, in cause_error
+    print(this, will+fail)
+                ~~~~^~~~~
+>>TypeError: can only concatenate str (not "int") to str << # THIS IS WHAT WE NEED.
+```
+While this looks scary to an untrained eye, it's really not that all scary.
+The format of python's errors, are rather easier to read in comparison to other languages, 
+as the language is interpreted, it gives you a very accurate traceback of where our error occured.
+
+Lets first breakdown the issue to this:
+
+```
+main(): line 14 had an error
+|
+|--->cause_error(): line 10 inside of main() is where the error occurs.
+    | 
+    |----------->print(this, will+fail): line _5_ experienced an error.
+                                 ^
+                                 |---- we tried to concatenate an integer with a string
+                                       and because these are 2 different data types, we
+                                       will experience an error because data types were
+                                       not typecasted. (we fix this with str(fail))
+```
+
+Because this datatype error occurs, we actually get the error code from the interpreter:
+`TypeError: can only concatenate str (not "int") to str` 
+
+## Try/Except/Finally statements
+
+Now that we know how to read errors, we can actually write robust code called Try/Except statements.
+In other languages, this might be called try/catch, or you might not have these at all. Most Object
+Oriented Programming languages do, but you might have to search up how to mimic this functionality.
+
+In C, you would have to manually catch these errors before compiling, and in Rust you could use the Result<T,E> return type, but
+in python, they actually make error handling extremely simple with `try/except`
+
+what does a `try/except` function do exactly? Well, lets use our code from earlier with `cause_error()`:
+
+```py
+def cause_error():
+    this = "this"
+    will = "will"
+    fail = 3
+    print(this, will+fail)
+
+
+def main():
+    print("hello world!")
+    # let's use a try/except control block.
+    try:
+      cause_error()
+    except TypeError:
+      print("We had an error!: TypeError")
+    finally:
+      print("We got through our try/except block!")
+
+
+if __name__ == "__main__":
+    main()
+```
+To breakdown what's going on when we run our code:
+
+1. Our program will `try` to run the function, `cause_error()`
+when it does, it will faile because of the `TypeError` exception
+that we saw occur.
+2. We will then go to our `except` block, and then inform the user of the error.
+3. No matter if `cause_error()` runs successfully, or if an exception is raised,
+we will `finally` inform the user that we got through our try/except block.
+
+We can actually make the `except` block more general and print out any type of error with:
+```py
+try:
+  cause_error()
+except Exception as error_code:
+  print(f"We had an error!: {type(error_code).__name__}")
+```
+This will actually print out the error without us having to define the error in the `except` statement,
+this way if we were to encounter any other error in our code, we will actually catch that error, and
+print out what happened to the user. This way, if we were to fix our original error and came into contact
+another error, we actually know what occurs.
+
+If we want to get the exact line where it goes wrong, we would have to use `traceback` library:
+```py
+import traceback
+
+try:
+  cause_error()
+except Exception as error_code:
+  print(traceback.format_exc())
+```
+This will actually print out the same thing we see inside of the error without terminating our program.
+
+It is very good to write your code like this, as if when you write code for future projects,
+you want to make it as robust and fool-proof as possible. It's always best to apply Murphy's law
+when making programs:
+
+> "Anything that can go wrong, will go wrong."
+
+
+# UNFINISHED SECTIONS.
 
 # Imports and using libraries
 ## Using python's built-in libraries
@@ -1096,4 +1220,3 @@ To see more about recursive vs. iterative, [read this](https://edward-huang.com/
 ## cython
 ## Object Wrappers
 ## Communicating to a larger ecosystem using JSON and STDOUT or STDIN
-
