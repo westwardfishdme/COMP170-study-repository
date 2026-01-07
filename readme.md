@@ -52,11 +52,7 @@ The following sections are unfinished and will be appended to at a later date:
 
 
 [Advanced Python]
-- [STDOUT/STDIN/STDERR]
-- [Writing code to interact with APIs]
 - [Asynchronous python]
-- [Object Wrappers]
-- [cython]
 - [Input Sanitization]
 
 
@@ -627,7 +623,7 @@ main()
 Python is a very finnicky language, and as such you have to name functions and variables properly.
 
 - A function or variable cannot start with a number.
-- Best to avoid weird characters like "@", ")" or "*" for example...
+- Best to avoid weird characters like "@", ")" or "*" for example, as these are specially assigned characters read by the interpreter.
 - No spaces!
 
 see this [blogpost](https://itoolkit.co/blog/2023/08/what-variable-names-are-illegal-in-python/) for more information.
@@ -975,7 +971,7 @@ for i in range(30):
 
 ```
 For something like this it is best advised to consult all other possible ways to solve this as it can get very slow and messy fast--
-This particular algorithm runs in `O(30n^2)`. Thats because as you can guess we are calling the inner for loop `for j in range(30)`
+This particular algorithm runs in `O(n^2)`. Thats because as you can guess we are calling the inner for loop `for j in range(30)`
 every time we iterate through the outer loop `for i in range(30)` so as you can imagine this not only would hog up resources in its complex
 calculations, but also be extremely inefficient. However, it is not always the case that we can escape something like this, but there are alternatives.
 
@@ -1218,15 +1214,128 @@ when making programs:
 
 > "Anything that can go wrong, will go wrong."
 
+# Classes
+Python uses an extreme
 
-# UNFINISHED SECTIONS.
+
 
 # Imports and using libraries
+Sometimes, you when writing code, you may want to break your code up into 
 ## Using python's built-in libraries
-## Using self-defined libraries
-## Using PIP and external python libraries.
+You can import any built-in libraries using their name respectively.
+for example:
+```py
+import math;
 
-# Advanced Python
-## cython
-## Object Wrappers
-## Communicating to a larger ecosystem using JSON and STDOUT or STDIN
+```
+this imports the math library, which is built into python.
+To see a full list, see: 
+[The Official Documentation for Python](https://docs.python.org/3/library/index.html)
+
+## Using self-defined libraries
+You can use seperate files or libraries that you made yourself by making an it a file, or in a seperate folder/directory.
+For example, you may want to write code into modules that each holds functions that are related to a specific task or feature.
+
+### Code Examples
+
+In our first example, let's look at the following directory tree:
+```
+src/
+|-[main.py]
+|-[foo.py]
+```
+Inside our root directory, we have our `main.py` and `foo.py`, of which we can directly import `foo.py` 
+```py
+
+```
+
+```py
+# main.py
+import foo
+def main():
+  foo.func()
+
+```
+
+
+#### Writing from other directories.
+When writing it as a seperate directory, it acts as a seperate class, therefore you can do something like this:
+
+```
+src/
+|-[main.py]
+|-[my_lib]
+     |----[__init__.py]
+     |----[otherfile.py]
+```
+
+In the tree above, we have `main.py` in the main directory, and `my_lib` as a seperate directory. 
+
+It is important to note that `__init__.py` inside of `my_lib` can ONLY see what is inside of the directory, and when importing files from within `my_lib`, you must declare that
+the root directory is within `my_lib`. To do this, you use the `from . import x` when working in a subdirectory of your main project:
+#### inside of my_lib/otherfile.py
+```py
+# inside mylib/otherfile
+def bar():
+  print("bar")
+
+```
+#### inside of my_lib/__init__.py
+
+```py
+# inside of my_lib/__init__.py
+from . import otherfile
+
+def foo():
+  print("foo")
+
+def foobar():
+  foo()
+  otherfile.bar()
+
+```
+
+#### main file:
+```py
+# inside main.py
+import my_lib
+def main():
+  my_lib.foobar()
+```
+
+#### Output when running main.py:
+```
+foo
+bar
+```
+## Example 2
+In addition, we can call functions independently from inner files, for example:
+
+```py
+# inside main.py
+import my_lib
+
+def main():
+  my_lib.foo()
+  my_lib.foobar()
+  my_lib.otherfile.bar()
+
+```
+### Output when running main.py:
+```
+foo
+foo
+bar
+bar
+```
+
+## Using PIP and external python libraries.
+If there is code outside of your project that you would like to use-- you can easily import them into your
+project using python's package manager `pip`. You can install packages using the command-line with:
+
+```
+$ pip install somepackage
+```
+
+Note: this may work differently depending on which operating system you're on. Some python setups may be running on an externally managed environment,
+which means that you have to install packages using an `env` based directory. To see more: [read the official documentation](https://packaging.python.org/en/latest/specifications/externally-managed-environments/)
