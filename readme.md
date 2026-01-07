@@ -245,9 +245,12 @@ print('hello world!')
 # always best practice to use double quotes (") wherever possible.
 ```
 
+
 Slightly advanced note: 
 
-print statements will always produce STDOUT (standard output) which is a special form of output.
+print statements will always produce STDOUT (standard output) which is a special form of output, unless
+given as an argument inside of the print statement to print to another file otherwise.
+
 This is because of how computers were originally designed to handle the 3 types of data flow:
 - STDIN (Standard Input)
 - STDOUT (Standard Output)
@@ -260,6 +263,12 @@ STDOUT **should** be used to output desired products of data, while data outputt
 be used to print out **debugging information**. As you grow in your journey as a developer, you will find this to be very important
 when designing programs that have very robust and complicated processes, and will have to handle specific cases
 where you have STDERR, and STDOUT messages occuring.
+
+To print to STDERR, you can do so like so:
+```py
+import sys
+print("hello world", file=sys.stderr) # prints to stderr
+```
 
 ## Syntax
 If you're using a fancy shmancy IDE (like me), you'll more than likely get warned about this as you write code.
