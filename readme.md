@@ -65,17 +65,11 @@ or if you want to become a hobby developer like me, this class will be
 extremely influential in your journey as a developer, and will hopefully demystify the intricacies
 of computer programming. 
 
-I'm going to **try** to create youtube videos for each weeks topic; at the time of
-writing this we are on week 3, and just covered `data types` in Python today. 
-I also included someone else's playlist on [python](#miscellaneous-videos-and-other-learning-resources), 
-but in my videos, granted that I get permission from Dr. Ennaoui and the other professors of the course--
-cover previous homework problems from the textbook, and list them here as unlisted videos.
-
 A little bit about me:
 - I have been programming since I was about 13, I know numerous languages but have primarily worked in C, Rust, and Bash.
 - I have written highly intense software projects, most you can see on [my github page](https://github.com/westwardfishdme)
 although, I have kept some in private due to me not wanting to share all of my projects.
-- Currently, I am learning concurrent programming in Rust, which is very important for programming software for server/client models, hats off to you if you know that.
+- Currently, I am learning concurrent programming in Rust, which is very important for programming software for server/client models.
 - Although I have worked with python before in my youth, and it's been years since I've used the language, I still have
 a lot of experience in both writing it and reading it statically. 
 
@@ -83,20 +77,18 @@ Don't let that last point fool you! Once you master how to view patterns in prog
 you can see how knowledge overlaps between languages. The truth is, you can use any language to write
 any program. A developer's choice in programming language is either by design or preference, and sometimes these reasons can overlap!
 
-You can see an example of that in this [video of a guy writing a whole webserver in bash.](https://www.youtube.com/watch?v=L967hYylZuc)
+You can see an example of that in this [video of YouSuckAtProgramming writing a whole webserver in bash.](https://www.youtube.com/watch?v=L967hYylZuc)
 
 If you feel like the video is too advanced, or too long, feel free to not watch it BUT I recommend you at least read my explanation of why that video matters here:
 
-Bash is not typically used to write such advanced software as the guy in the video was making, i.e. a webserver that can host a website, BUT he managed to not only make it work,
-but eloquently wrote it all in bash, without any the use of any other languages. There are some segements where he implies that there might be modules that needs an implementation in C,
-but nonetheless, he omits that from his final project, and accomplished an extraordinary task that I recently didn't even know was possible until he did it and mentioned other projects
-that accomplished the same thing.
+Bash is not typically used to write such software as YSAP was making in the video, BUT he managed to not only make it work,
+but eloquently wrote it all in bash, without any the use of any other languages (with the exception of specific system utilities). There are some segments where he implies that there might 
+be modules that needs an implementation in C, but nonetheless, he omits that from his final project, and accomplished an extraordinary task that I recently didn't even know was possible until 
+he did it and mentioned other projects that accomplished the same thing.
 
-The reason why I say this and mention this video at all is because this course is not designed to just teach you python, but to teach you the skills necessary to become a decent enough
+The reason why I say this and mention this video at all is because this guide is not designed to just teach you python, but to teach you the skills necessary to become a decent enough
 programmer to create and problem solve. Great programmers like the guy in that video, Dennis Ritchie, Grace Hopper, or Steve Wozniak didn't just become magically good at programming,
 they became great programmers because they practiced and learned how to solve difficult problems using **pattern based thinking.**
-
-Needless to say, I am relatively 'advanced' in the field, but like y'all I am still learning.
 
 ### Why I made this, how you should use it, and covering past assignments.
 I was inspired to make this repository because someone in class asked if I could synthesize a list of youtube videos for them 
@@ -225,7 +217,7 @@ i.e.
 - java ->`System.out.println()` 
 - javascript -> `Console.log()`
 - bash/posix shell -> `echo` or `printf`
-- C/C++ -> `printf`
+- C/C++ -> `printf()` (accepted in both); `std::cout` (all versions of C++) `std::print` (C++ 23 only)
 - Rust -> `println!()`
 
 Print will almost always be there, and it's the best way to first learn how to use a language, as you can visually
@@ -238,12 +230,10 @@ in python we can simply call `print()` like so:
 print("hello world!")
 # or with single quotes:
 print('hello world!')
-# note: in other languages, single quotes typically only designate a single character,
-# which is it's own type in most other languages, but not python.
-
-# so while it is perfectly OK to use single quotes to print out a message, it is almost
-# always best practice to use double quotes (") wherever possible.
 ```
+> note: in other languages, single quotes can sometimes be only designated to a single character,
+ which is it's own type in most other languages, but not python. so while it is perfectly OK to use 
+single quotes to print out a message, it is 
 
 
 Slightly advanced note: 
@@ -262,7 +252,7 @@ slightly differently to STDOUT.
 STDOUT **should** be used to output desired products of data, while data outputted by STDERR should almost always
 be used to print out **debugging information**. As you grow in your journey as a developer, you will find this to be very important
 when designing programs that have very robust and complicated processes, and will have to handle specific cases
-where you have STDERR, and STDOUT messages occuring.
+where you have STDERR, and STDOUT messages occurring.
 
 To print to STDERR, you can do so like so:
 ```py
@@ -445,7 +435,7 @@ print(1>2) # Output is false.
 Boolean expressions are fundamentally the most important part of any programming language.
 They determine what is called "control flow", and I'll also write about this as we do cover this later in class.
 
-Basically, all you need to know right now is that boolean means True or False, thats it, they can only be those 2 values.
+Basically, all you need to know right now is that boolean means True or False, that's it, they can only be those 2 values.
 
 If you're interested in the theory, it follows the logic of electric circuits. 1 being on, 0 being off.
 See this [crash course video](https://www.youtube.com/watch?v=gI-qXk7XojA) to understand the depths of booleans,
@@ -732,11 +722,11 @@ def clock_from_secs(seconds_from_start):
 I have a few programs that utilize this algorithm in other languages, but this is python edition :3
 
 ### Advanced mathematic expressions.
-for more advanced calculations, and math principles, we would have to use the [math module](#using-pythons-built-in-libraries) (not complete yet!)
+for more advanced calculations, and math principles, we would have to use the [math module](#using-pythons-built-in-libraries)
 
 # Input
 Python actually makes reading user input really easy. You can do this a numerous amount of ways,
-but for most beginners it's best interpretted by using the `input()` function. You can invoke
+but for most beginners it's best interpreted by using the `input()` function. You can invoke
 `input()` by writing the following code:
 ```py
 def ask_question():
@@ -773,12 +763,12 @@ The best way I can describe why it's such a pain is because of the following rea
 these bugs occur. Thus inducing so many migraines in the process.
 
 Generally speaking, you want to treat user input with as little trust as possible, and install the most amount of safeguards possible. Especially in a
-language like python because of how variable types are handled with very little pre-emptive definition. What does that mean?
+language like python because of how variable types are handled with very little preemptive definition. What does that mean?
 
 ```py
 # say we ask a user for a number.
 user_num=int(input("give me a number!: "))
-# they put in 'three...'
+# they put in "three..."
 ```
 Now the whole program goes kaput!
 
@@ -849,7 +839,7 @@ def check_color(color):
   if color == "red":
     print("That's my favorite color too!")
   elif color == "blue":
-    print("I guess thats an ok color, its not my favorite but I like it!")
+    print("I guess that's an ok color, its not my favorite but I like it!")
   else:
     print("I guess we can have different opinions, but I don't like that color.")
 
@@ -904,17 +894,12 @@ boolean expressions.
 
 For example, you want to generally format it such that it looks like this:
 ```py
-# WRITE IT LIKE THIS:
-# you don't need to add the parentheses, but
-# I included them because it makes it slightly
-# more readable.
-
-if (m==1) or (m==2):
+if m==1 or m==2:
   # do something...
 
 
 # DO NOT WRITE EXPRESSIONS LIKE THIS, THIS WILL BE A LOGICAL BUG.
-# Meaning that it will run, but "2" is a literal,
+# Meaning that it will run, but "2" in this case is a literal,
 # meaning that it will always return true...
 
 if m==1 or 2:
@@ -946,14 +931,16 @@ match name:
     print(f"hello {name}, do you drink monster energy by chance?")
   case "miranda": 
     print(f"hello {name}, you share the same name as the iCarly actor!")
-  case _: # this is like our else statement,
+  case _: # this is like our else statement, or default
     print(f"Oh, {name}. I don't know you!")
 ```
 Typically in a software development environment, it is preferred to write logic based on match/case statements rather
-than if/else statements **IF POSSIBLE.**
+than if/else statements if you have a need to handle multiple different conditionals.
 
 You won't always have the opportunity to use match/case statements, but if you HAVE to use an if statement,
-try to use them as minimally of them as you possibly can.
+try to use them as minimally of them as you possibly can. As a rule of thumb; if you need to write an `elif`, it
+might be better to opt for a `match` statement. This is because this will allow you to write code that is easier to
+maintain, implement features easier, or simply to make your code easier to read.
 
 # Iterators and Recursion
 ## For loops
@@ -980,7 +967,7 @@ for i in range(30):
 
 ```
 For something like this it is best advised to consult all other possible ways to solve this as it can get very slow and messy fast--
-This particular algorithm runs in `O(n^2)`. Thats because as you can guess we are calling the inner for loop `for j in range(30)`
+This particular algorithm runs in `O(n^2)`. That's because as you can guess we are calling the inner for loop `for j in range(30)`
 every time we iterate through the outer loop `for i in range(30)` so as you can imagine this not only would hog up resources in its complex
 calculations, but also be extremely inefficient. However, it is not always the case that we can escape something like this, but there are alternatives.
 
@@ -1045,7 +1032,7 @@ def countfrom(x:int, y:int):
 
 def main():
   try: # check out try/except statements, will be posted later.
-    print("we sucessfully performed the function countfrom()")
+    print("we successfully performed the function countfrom()")
     print(countfrom("we", 2))
   except TypeError:
     print("we hit an error: TypeError")
@@ -1070,8 +1057,8 @@ Ideally in situations where we want to break out of a function all together if s
 
 ## Recursion
 Now that you kind of understand how to use pass and break functions, you can use them in recursive functions.
-Now the thing about recursive functions it is rather complicated, and honestly not that much different from iteratable
-functions, but they are very different in terms of efficiency and performance. Generally speaking, recursive functions
+Now the thing about recursive functions it is rather complicated, and honestly not that much different from iterable
+functions **in practice**, but they are very different in terms of efficiency and performance. Generally speaking, recursive functions
 can be useful in certain scenarios or for code reading, but keep in mind that you are calling a function numerous times
 which causes an increase in memory use each time-- so be wary!
 
@@ -1082,10 +1069,12 @@ What is a recursive function? Pretty much a function that calls itself:
 def factorial(x):
   if x > 0:
     return n * factorial(x - 1)
-  else:
+  else: # base case
     return 1
 ```
 see how in the definition of the function, it calls itself? That's what recursion is.
+
+Recursive functions are used a lot in many different algorithms, but 
 
 Check out more from the wikipedia article [here](https://en.wikipedia.org/wiki/Recursion#In_computer_science)
 
@@ -1132,7 +1121,7 @@ Traceback (most recent call last):
 ```
 While this looks scary to an untrained eye, it's really not that all scary.
 The format of python's errors, are rather easier to read in comparison to other languages, 
-as the language is interpreted, it gives you a very accurate traceback of where our error occured.
+as the language is interpreted, it gives you a very accurate traceback of where our error occurred.
 
 Lets first breakdown the issue to this:
 
@@ -1155,11 +1144,12 @@ Because this datatype error occurs, we actually get the error code from the inte
 ## Try, Except, and Finally statements
 
 Now that we know how to read errors, we can actually write robust code called Try/Except statements.
-In other languages, this might be called try/catch, or you might not have these at all. Most Object
-Oriented Programming languages do, but you might have to search up how to mimic this functionality.
+In other languages, this might be called `try/catch`, or they may have to be manually implemented into the language. 
+Most Programming languages do have some sort of result-based handling, but you might have to do your own research 
+on either how to implement or mimic this functionality.
 
-In C, you would have to manually catch these errors before compiling, and in Rust you could use the Result<T,E> return type, but
-in python, they actually make error handling extremely simple with `try/except`
+In C, you would have to manually catch these errors before compiling them handling specific return types or `errno` within a conditional,
+and in Rust there is the `Result<T,E>` enumeration type, but in python they actually make error handling extremely simple with `try/except`
 
 what does a `try/except` function do exactly? Well, lets use our code from earlier with `cause_error()`:
 
@@ -1188,7 +1178,7 @@ if __name__ == "__main__":
 To breakdown what's going on when we run our code:
 
 1. Our program will `try` to run the function, `cause_error()`
-when it does, it will faile because of the `TypeError` exception
+when it does, it will fail because of the `TypeError` exception
 that we saw occur.
 2. We will then go to our `except` block, and then inform the user of the error.
 3. No matter if `cause_error()` runs successfully, or if an exception is raised,
@@ -1204,7 +1194,7 @@ except Exception as error_code:
 This will actually print out the error without us having to define the error in the `except` statement,
 this way if we were to encounter any other error in our code, we will actually catch that error, and
 print out what happened to the user. This way, if we were to fix our original error and came into contact
-another error, we actually know what occurs.
+another error, we can actually know what specific occurs.
 
 If we want to get the exact line where it goes wrong, we would have to use `traceback` library:
 ```py
@@ -1224,9 +1214,10 @@ when making programs:
 > "Anything that can go wrong, will go wrong."
 
 # Classes
-Python uses an extreme
+Python uses an extremely easy and simple class system. However that is covered in 271 and only partially introduced in 170.
+Classes essentially allow you to build your own types and handle them with your own custom defined methods and implementations. 
 
-
+You can use classes to build complex data types that store numerous values within class attributes.
 
 # Imports and using libraries
 Sometimes, you when writing code, you may want to break your code up into 
@@ -1242,7 +1233,7 @@ To see a full list, see:
 [The Official Documentation for Python](https://docs.python.org/3/library/index.html)
 
 ## Using self-defined libraries
-You can use seperate files or libraries that you made yourself by making an it a file, or in a seperate folder/directory.
+You can use separate files or libraries that you made yourself by making an it a file, or in a separate folder/directory.
 For example, you may want to write code into modules that each holds functions that are related to a specific task or feature.
 
 ### Code Examples
@@ -1268,7 +1259,7 @@ def main():
 
 
 #### Writing from other directories.
-When writing it as a seperate directory, it acts as a seperate class, therefore you can do something like this:
+When writing it as a separate directory, it acts as a separate class, therefore you can do something like this:
 
 ```
 src/
@@ -1278,7 +1269,7 @@ src/
      |----[otherfile.py]
 ```
 
-In the tree above, we have `main.py` in the main directory, and `my_lib` as a seperate directory. 
+In the tree above, we have `main.py` in the main directory, and `my_lib` as a separate directory. 
 
 It is important to note that `__init__.py` inside of `my_lib` can ONLY see what is inside of the directory, and when importing files from within `my_lib`, you must declare that
 the root directory is within `my_lib`. To do this, you use the `from . import x` when working in a subdirectory of your main project:
