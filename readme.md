@@ -37,22 +37,21 @@ Completed sections:
 - [Exit and Errors](#exit-and-errors)
 - [Try/Except statements](#try-except-and-finally-statements)
 
+
+[Imports and using libraries](#imports-and-using-other-libraries)
+- [Using python's built-in libraries](#using-pythons-built-in-libraries)
+- [Using self-defined libraries](#using-self-defined-libraries)
+- [Using pip to install libraries](#using-pip-and-external-python-libraries)
+
 The following sections are unfinished and will be appended to at a later date:
-
-[Imports and using libraries]
-- [Using python's built-in libraries]
-- [Using self-defined libraries]
-- [Using pip to install libraries]
-
 [Methods, and Classes](#methods-and-classes)
 - [What is a method?]
 - [Python classes]
 - [Class Attributes]
 - [Writing custom objects]
 
-
 [Advanced Python]
-- [Asynchronous python]
+- [Concurrent python]
 - [Input Sanitization]
 
 
