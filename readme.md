@@ -1276,9 +1276,6 @@ src/
 |-[foo.py]
 ```
 Inside our root directory, we have our `main.py` and `foo.py`, of which we can directly import `foo.py` 
-```py
-
-```
 
 ```py
 # main.py
