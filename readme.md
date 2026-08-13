@@ -1239,13 +1239,16 @@ when making programs:
 > "Anything that can go wrong, will go wrong."
 
 # Classes
-Python uses an extremely easy and simple class system. However that is covered in 271 and only partially introduced in 170.
+Python uses an extremely easy and simple class system. However this will be covered in 271 and only partially introduced in 170.
 Classes essentially allow you to build your own types and handle them with your own custom defined methods and implementations. 
 
 You can use classes to build complex data types that store numerous values within class attributes.
 
 # Imports and using libraries
-Sometimes, you when writing code, you may want to break your code up into 
+Sometimes, you when writing code, you may want to break your code up into separate modules, or use already pre-existing
+code to better speed up your development process. This will be especially important when writing larger projects as modularizing
+your programs makes it easier to maintain and organize your code.
+
 ## Using python's built-in libraries
 You can import any built-in libraries using their name respectively.
 for example:
