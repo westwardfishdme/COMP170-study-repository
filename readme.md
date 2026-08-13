@@ -66,15 +66,9 @@ of computer programming.
 
 A little bit about me:
 - I have been programming since I was about 13, I know numerous languages but have primarily worked in C, Rust, and Bash.
-- I have written highly intense software projects, most you can see on [my github page](https://github.com/westwardfishdme)
+- I have written numerous software projects, most you can see on [my github page](https://github.com/westwardfishdme)
 although, I have kept some in private due to me not wanting to share all of my projects.
 - Currently, I am learning concurrent programming in Rust, which is very important for programming software for server/client models.
-- Although I have worked with python before in my youth, and it's been years since I've used the language, I still have
-a lot of experience in both writing it and reading it statically. 
-
-Don't let that last point fool you! Once you master how to view patterns in programming languages, 
-you can see how knowledge overlaps between languages. The truth is, you can use any language to write
-any program. A developer's choice in programming language is either by design or preference, and sometimes these reasons can overlap!
 
 You can see an example of that in this [video of YouSuckAtProgramming writing a whole webserver in bash.](https://www.youtube.com/watch?v=L967hYylZuc)
 
@@ -115,10 +109,14 @@ I wrote with numerous comments to help understand what is happening, what intera
 
 (I haven't finished that yet, but you'll see it here if you check back at a later date...)
 
-As per the syllabus, I am unable to share my answers with you (bummer...) but I highly incentivize you to
-try to commit yourself to doing those assignments. While they seem REALLY difficult, I promise you they do actually
-teach you how to think algorithmically, and coming from a lifelong independently learning programmer who has gone to 
-learn python 3 times now from schools (elementary, high school, and college now...), those exercises really do help.
+As per the syllabus, I am unable to share any of my answers to assignments with you but I highly incentivize you to
+try to commit yourself to doing those assignments. While they can seem REALLY difficult if you're absolutely new to programming, 
+I promise you they will actually teach you how to think algorithmically, and coming from a lifelong independently learning programmer 
+who has gone through learning python 3 times now from different levels of schooling (elementary, high school, and now college...), 
+those exercises really do help.
+
+In addition, I do urge you to try and pick up other languages as well. Having multiple languages under your belt is now necessary for
+a successful career in any Computer Science field **will** require you to have an understanding of at least 2 or more languages.
 
 With that said, I hope this guide serves you well, and you find this easy to learn!
 
@@ -129,12 +127,13 @@ are truly interested in programming, these are some books that I had read and vi
 ### LEARNING HOW TO PROGRAM IN PYTHON, AND HOW TO THINK LIKE A PROGRAMMER
 
 This specific section is dedicated in providing resources to help learn how to think like a programmer, and build foundational
-principles for learning. You might notice that some content creators kinda sh*t on academia, but
-that's because for the most part, programming is a skill that most really great programmers learn how to do on their own time.
+principles for learning. You might notice that some content creators kinda dunk on academia, but that's because for the most part; 
+programming is a skill that most really great programmers learn how to do on their own time.
 
 It does breed this toxic culture, but I'm neither here nor there on how someone learns concepts. I think that academia provides
 people with a great framework to learn these concepts, but to really solidify knowledge, I would take a listen to what people
-say who learned how to program independently, as they *typically* have better inputs, but that is not always the case.
+say who learned how to program independently; not only because they are passionate about the work that they do-- but because
+they had to challenge themselves beyond what is typically expected in a college curriculum and offer perspectives outside of academia.
 
 - [Fireship's wonderful video on how you should learn how to code](https://www.youtube.com/watch?v=NtfbWkxJTHw)
 
@@ -195,14 +194,14 @@ brain will tackle such problems.
 
 So the C programming language itself is not something that we cover in this course specifically, but C is such a fundamental language in
 computing, that NOT reading it or knowing about it will be extremely detrimental in your career as a programmer as most languages are either
-based or written in C (such as python, which uses C in it's backend)
+based or written in C (such as python, which uses C and C++ as the language for the python interpreter)
 
 If you don't want to read a whole other book, which I totally understand, you can either check out the wikipedia article [here](https://en.wikipedia.org/wiki/C_(programming_language))
 or this video of why C is so important [from computerphile here.](https://www.youtube.com/watch?v=ci1PJexnfNE)
 
 ### In summary...
 You don't have to check these videos or articles out at all, but they do help reinforce REALLY good learning habits when it comes to programming,
-they were videos that I have sent out to my friends who have asked me how to learn how to program, and it's helped them in their careers.
+they were videos that I have sent out to my friends who have asked me how to learn how to program, and it has helped them in their learning process.
 
 # The Guide for COMP170
 
@@ -219,8 +218,8 @@ i.e.
 - C/C++ -> `printf()` (accepted in both); `std::cout` (all versions of C++) `std::print` (C++ 23 only)
 - Rust -> `println!()`
 
-Print will almost always be there, and it's the best way to first learn how to use a language, as you can visually
-see what's going on inside of the computer, whether that is printing out variables, or the results of maths 
+Some variation of statement print will always be there, and it's the best way to first learn how to use a language, as you can visually
+see what's going on inside of your program as it runs: whether that is printing out variables, or the results of maths 
 equations, `print()` is going to be your __best friend.__
 
 in python we can simply call `print()` like so:
@@ -231,11 +230,23 @@ print("hello world!")
 print('hello world!')
 ```
 > note: in other languages, single quotes can sometimes be only designated to a single character,
- which is it's own type in most other languages, but not python. so while it is perfectly OK to use 
-single quotes to print out a message, it is 
+ which is it's own type in most other languages, but not python. So while it is perfectly OK to use 
+single quotes to print out a message, it is a matter of preference.
 
+You can also use formatting strings; which make it easier to include variables into your strings:
+```py
+x:int = 3
+greet:str = "Hello world!"
+# format strings are denoted by f"{}", where inside the curly braces 
+# is where your variable name is inserted.
+print(f"{greet} {x}")
+```
+##### output
+```
+Hello world! 3
+```
 
-Slightly advanced note: 
+#### more in depth: 
 
 print statements will always produce STDOUT (standard output) which is a special form of output, unless
 given as an argument inside of the print statement to print to another file otherwise.
@@ -260,7 +271,7 @@ print("hello world", file=sys.stderr) # prints to stderr
 ```
 
 ## Syntax
-If you're using a fancy shmancy IDE (like me), you'll more than likely get warned about this as you write code.
+If you're using a fancy shmancy IDE, you'll more than likely get warned about this as you write code.
 Typical IDE's will underline the improper code with red underlining, or a variation of which and tell you what
 exactly needs to be done to fix the error. An example of improper syntax would be:
 
@@ -462,7 +473,7 @@ Here are some easy do's and don'ts when writing functions:
 - Compartmentalize your code; use functions to break your code into modular pieces that can be called individually.
 - Use functions as a way to reduce repeated patterns of code.
 - Name your functions and parameters accurately, avoid vague naming schemas.
-- If possible, give your functions a return type, being able to pass variables into functions and printing out the result of a function is a very
+- If necessary, give your functions a return type, being able to pass variables into functions and printing out the result of a function is a very
 useful skill and tool that will be important in your journey. In my [example program](rock_paper_scissors_example/), I show how this is done to store the result of the computer randomly
 choosing an index to return a string. 
 
@@ -508,7 +519,7 @@ want it to give me my result as an integer.
 When I write the function `add()`, it might look something like this:
 
 ```py
-def add(num1, num2):
+def add(num1, num2)->int:
   return int(num1+num2) # i can just cast the whole equation as an int, and this will always return type int.
 ```
 Thinking of functions like this will help you out with soooooo many programming problems. Not only because it makes your job a lot simpler,
@@ -518,7 +529,7 @@ to certain functions.
 However, returns can also be used to give signals:
 ```py
 # i haven't talked about if statements yet in depth, but they just check boolean values...
-def some_function(some_string):
+def some_function(some_string)-> int:
   if some_string=="hi":
     return 2
   elif some_string=="goodbye":
@@ -530,7 +541,7 @@ def some_function(some_string):
 # you should do this if there are more than one possibility so
 # you don't have a million if elif statements.
 
-def some_function_using_match(some_string):
+def some_function_using_match(some_string)->int:
   match some_string:
     case "hi":
       return 2
@@ -551,18 +562,18 @@ python super easy and special is that types are inferred by your definition.
 
 Here are some examples of how python performs automatic type inference:
 ```py
-my_integer=12 # this will be inferred as an integer
+my_integer:int = 12 # this will be inferred as an integer
 
-my_other_integer=0x15 #we haven't covered this yet, but this is 21 in hexadecimal (base 16) and it counts as an integer!
+my_other_integer:int = 0x15 #we haven't covered this yet, but this is 21 in hexadecimal (base 16) and it counts as an integer!
 # hexadecimal is super important in the field of computing, hopefully we'll see why later.
 
-my_string="wowzas!" # will always be inferred as a string
+my_string:str = "wowzas!" # will always be inferred as a string
 
-my_float=12.0 # any number with a '.' to separate decimal values are always inferred as a floating point integer.
+my_float:float = 12.0 # any number with a '.' to separate decimal values are always inferred as a floating point integer.
 
-my_bool=True # is inferred as boolean, but also see my example below:
+my_bool:bool = True # is inferred as boolean, but also see my example below:
 
-my_other_bool=(my_float > my_integer) # this is also inferred as a boolean type!
+my_other_bool:bool = (my_float > my_integer) # this is also inferred as a boolean type!
 
 ```
 Something that will reduce future headaches is to immediately define a variable with a predefined type.
@@ -573,7 +584,8 @@ You would do that like this:
 my_int:int = 12
 
 ```
-With something like this, it helps to read your code and keep track of variables, especially when you start having complex things happen to them, like throwing them through functions as parameters.
+With something like this, it helps to read your code and keep track of variables and their types; which especially becomes invaluable
+when you start having complex things happen to them, such as throwing them through functions as parameters.
 
 #### Proper naming
 Functions and variables cannot start with certain keywords, characters, or generally numbers, this section will cover that.
@@ -588,25 +600,25 @@ A good example of this would be:
 # in this program, we do some basic returns to show us how we can use functions and variables properly to understand what
 # our program is doing.
 
-def addition(num1, num2):
+def addition(num1, num2)-> int:
     return int(num1+num2)
 
 
-def greetUser(username):
+def greet_user(username)-> str:
     return "Hello "+username+" long time no see!"
 
 
-def userFriend(friend_name):
+def user_friend(friend_name)-> str:
     return "It's me your best friend "+friend_name+"!"
 
 
 def main():
     # my friend Tyler is telling me hello!
-    greetings = greetUser("John")
-    friend_greeting = userFriend("Tyler")
+    greetings = greet_user("John")
+    friend_greeting = user_friend("Tyler")
 
     # we also can do some addition
-    sum = addition(4, 5)  # should give a sum of 9
+    sum:int = addition(4, 5)  # should give a sum of 9
 
     # you can use a comma, but sometimes its best to learn practice proper string concatenation...
     print(greetings+" "+friend_greeting)
@@ -632,7 +644,7 @@ Special keywords include any key word that the python interpreter will not accep
 - `not` is one as well...
 - `for` is another keyword...
 - `def` is also another keyword...
-- so, so many more. see this list [here]()
+- so, so many more. see this list [here](https://www.geeksforgeeks.org/python/python-keywords/)
 
 You may have noticed I didn't say any 'types'
 While you can use types as function names, it is generally not recommended as it messes with the actual data type and can redefine functionality.
@@ -640,7 +652,7 @@ unless you are doing this for a very specific reason, it's best practice to not 
 
 ```py
 def int(): # DONT DO THIS!!!
-  pass # oooooh another secret keyword!
+  pass # do nothing
 ```
 ## Mathematical Expressions
 In python you can use math. The general rule of PEMDAS is typically followed, but occasionally, 
@@ -979,6 +991,7 @@ def main():
   j=0
   while (i >= j):
     print(i+j) #would count from 30 to 60
+    j+=1
 ```
 you can use while loops the same as for loops, but you can never use a for loop the same as a while loop. It's like that square can be a rectangle 
 argument "a square can be a rectangle, but a rectangle never a square".
@@ -995,7 +1008,7 @@ or better yet, use a `match/case` statement, for example:
 ```py
 
 def main():
-  while(True):
+  while True:
     print("If these conditions aren't met, I will run forever!")
     condition=str(input("What is your favorite pizza topping?: "))
 
@@ -1023,7 +1036,7 @@ they do nothing, it is unwise to doubt the power of a `pass` statement.
 Pass statements are **ESPECIALLY** useful when handling **errors**, or catching faulty logic. For example:
 
 ```py
-def countfrom(x:int, y:int):
+def countfrom(x:int, y:int)-> int:
   return int(x+y) 
   # in normal python, there would just be a string concatenation, 
   # but since we specify that we are casting a string to an int,
@@ -1065,7 +1078,7 @@ What is a recursive function? Pretty much a function that calls itself:
 
 ```py
 # this is an example from wikipedia, which i suggest you check out.
-def factorial(x):
+def factorial(x)->int:
   if x > 0:
     return n * factorial(x - 1)
   else: # base case
