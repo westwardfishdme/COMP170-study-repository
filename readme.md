@@ -393,7 +393,7 @@ not to confuse you:
 
 "Arrays" in other languages are lists which look like this in python:
 ```py
-my_list=[1,2,3,4,5,6]
+my_list:list =[1,2,3,4,5,6]
 
 ```
 In python, we do have specific arrays which can be invoked with:
