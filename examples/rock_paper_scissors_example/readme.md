@@ -20,7 +20,7 @@ In this little pet project that I wrote, you can check out how to do the followi
   so there will be some error messages if you try to kill the program using SIGINT or SIGKILL
   codes!
 
-There is alot happening here, but since it's super early in the semester, you can use this as a reference
-to kind of piece together what your code **should** resemble by the end of the semester.
+There is a lot happening here, but since it's super early in the semester, you can use this as a reference
+to kind of piece together what your code **should** resemble by the time you finish COMP 271.
 
 Peace, love, unity and respect :) 
