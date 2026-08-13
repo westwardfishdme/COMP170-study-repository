@@ -7,6 +7,9 @@ course at Loyola University during my pursuit for my undergraduate degree.
 Since its creation; I have made numerous changes and additions to this repository to better suit itself
 as a general guide to understanding python and programming as a whole. 
 
+The [examples](./examples/) folder does not contain any course work to comply with the course syllabus,
+and serves to be itself as an example for students to learn how to write basic programs by example.
+
 ## Content
 non-textbook materials... You can skip over this.
 - [Introduction](#introduction)
@@ -60,6 +63,12 @@ The following sections are unfinished and will be appended to at a later date:
 - [Concurrent python]
 
 ## Introduction
+> Note from the author:
+It's been about a year now since I have written this guide and taken this course, however I still maintain
+and update this repository on occasion to help future students should they come across this repository. 
+If there are any errors, issues, or improvements to this readme feel free to post an issue and I will try
+my best to correct them as soon as possible. No AI will be used in this repository and any AI contributions 
+will be automatically declined.
 
 Welcome! My name is Jonathan. I am an open source dev, with some free time 
 on my hands, so I came up with this idea to create a github repository for 
@@ -420,7 +429,7 @@ print("I am a programmer,")
 print("I love to write code!")
 
 ```
-It's important to note that `,` will produce a space while `+` will not, as Dr. Ennaoui also mentioned.
+It's important to note that `,` will produce a space while `+` will not.
 
 You can also multiply strings into one another, for example:
 ```py
