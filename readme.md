@@ -1,8 +1,14 @@
 
-# Westwardfishdme's Guide to succeeding to COMP170
+# Westwardfishdme's COMP170 Study Guide
+
+Study guide and reference I had made for other students during my time taking the Introduction to Object-Oriented Programming
+course at Loyola University during my pursuit for my undergraduate degree. 
+
+Since its creation; I have made numerous changes and additions to this repository to better suit itself
+as a general guide to understanding python and programming as a whole. 
 
 ## Content
-non-textbook materials...
+non-textbook materials... You can skip over this.
 - [Introduction](#introduction)
 - [Useful Misc. Youtube Videos](#miscellaneous-videos-and-other-learning-resources)
 
@@ -52,8 +58,6 @@ The following sections are unfinished and will be appended to at a later date:
 
 [Advanced Python]
 - [Concurrent python]
-- [Input Sanitization]
-
 
 ## Introduction
 
@@ -65,7 +69,7 @@ extremely influential in your journey as a developer, and will hopefully demysti
 of computer programming. 
 
 A little bit about me:
-- I have been programming since I was about 13, I know numerous languages but have primarily worked in C, Rust, and Bash.
+- I have been programming since I was about 13 (at the time of writing I am 23), I know numerous languages but have primarily worked in C, Rust, and Bash.
 - I have written numerous software projects, most you can see on [my github page](https://github.com/westwardfishdme)
 although, I have kept some in private due to me not wanting to share all of my projects.
 - Currently, I am learning concurrent programming in Rust, which is very important for programming software for server/client models.
