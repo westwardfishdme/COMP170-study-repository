@@ -65,9 +65,12 @@ The following sections are unfinished and will be appended to at a later date:
 ## Introduction
 > Note from the author:
 It's been about a year now since I have written this guide and taken this course, however I still maintain
-and update this repository on occasion to help future students should they come across this repository. 
-If there are any errors, issues, or improvements to this readme feel free to post an issue and I will try
-my best to correct them as soon as possible. No AI will be used in this repository and any AI contributions 
+and update this repository on occasion to help future students should they come across this repository.
+When I was writing this, I was writing it as the class was on-going, so some sections may refer to things as
+we had mentioned them during lectures.
+
+> If there are any errors, issues, or improvements to this readme feel free to post an issue and I will try
+my best to correct them as soon as possible. No AI had been, or will be used in this repository and any AI contributions 
 will be automatically declined.
 
 Welcome! My name is Jonathan. I am an open source dev, with some free time 
@@ -421,7 +424,7 @@ I love to write code!
 ```
 with: 
 ```py
-print("I am a programmer,"+'\n'+"I love to write code!")
+print("I am a programmer,\n"+"I love to write code!")
 ```
 instead of 
 ```py
@@ -505,10 +508,10 @@ function is something that always will have parameters even if there is none (li
 You can have an infinite amount of parameters, however I usually limit it to 4 at max, at which point, I would write other functions to perform different things.
 For example:
 ```py
-def addition(num1, num2, num3, num4): # nums{} are my parameters
+def addition(num1: int, num2: int, num3: int, num4: int)-> int: # nums{} are my parameters
   return num1+num2+num3+num4
 
-def multiply(num1,num2): #lets multiply some numbers too, their parameters are named num1 amd num2.
+def multiply(num1: int, num2: int)-> int: #lets multiply some numbers too, their parameters are named num1 amd num2.
   return num1*num2
 
 def main():
