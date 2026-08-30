@@ -29,6 +29,7 @@ Completed sections:
 
 [User Input](#input)
 - [How to handle user input properly](#handling-user-input)
+- [Writing to files](#files)
 
 [Control Flow](#control-flow)
 - [Logic in Python](#logic)
@@ -41,11 +42,9 @@ Completed sections:
 - [While loops](#while-loops)
 - [Recursion](#recursion)
 
-
 [Error Handling](#error-handling)
 - [Exit and Errors](#exit-and-errors)
 - [Try/Except statements](#try-except-and-finally-statements)
-
 
 [Imports and using libraries](#imports-and-using-other-libraries)
 - [Using python's built-in libraries](#using-pythons-built-in-libraries)
@@ -821,6 +820,73 @@ print(some_string.lower())
 
 Using case modifiers makes handling boolean values all that much easier, because you don't have to worry if your user puts in some funky text, because your
 program will automatically set it to either all `lowercase` or all `uppercase`.
+
+## Files
+Once you get comfortable with the previous sections, after a certain point, you're going to want to learn how to read and write to files.
+Files are not too difficult, but you can [read](#reading-files), [write, and append](#writing-and-appending) to them. Knowing what you
+have to do with a file is critical as this is how you manipulate and interact with files in the language. All you need to know is how
+to path to a file. A computer doesn't know where or what a file is if you just provide it a name, typically you have to provide it a 
+path to where a file should or would be. For example, a path in linux/MacOS would look like `/home/finch/coolfile.txt` or on Windows:
+`C:\Users\finch\My_Other_Cool_File`. 
+
+You can also tell a computer to use relative directories with the `.` character as the prefix of a path. For example, lets say I had a directory
+or folder structure that looks like this:
+
+```
+/home/finch/docs/python_project
+|-> my_file.txt
+|-> main.py
+```
+If I am inside of this `python_project` directory, I can interact with `my_file.txt` from the command line with the following syntax:
+
+```sh
+cat ./my_file.txt
+```
+
+If I were to say run that python script, it will use the current working directory as the place that `./` searches for.
+So if I were to run the script from the directory `/home/finch/foo_bar`, it would search inside of `foo_bar` instead of
+`/home/finch/docs/python_project`. If this is not the intended behavior of your project, you need to provide an absolute
+path such as `/home/finch/docs/python_project`. 
+
+
+### Reading Files
+Like the Input/Output model, reading a file is similar to receiving input. You can read a file in python with the following syntax:
+
+```py
+with open("./my_file.txt", "r") as my_file:
+  # do something with my_file
+  pass
+
+  # close the file once done.
+
+  # In the current version of python,
+  # using the `with` clause will close
+  # the file immediately after it escapes
+  # the block, but it's still good practice
+  # to include a verbose statement to grant certainty
+  # that the file is no longer going to be
+  # interacted with.
+  my_file.close()
+```
+
+### Writing and Appending
+
+Like reading, you can use the following syntax to write to a file; but there is a caveat-- writing to a file means that you
+are going to overwrite any data at the specified path; therefore if you want to add information to a file; use the `'wa'` prefix
+to tell python to write if the file doesn't exist, and append if it does.
+
+
+```py
+with open("./my_file.txt", "wa") as my_file:
+  # do something with my_file
+  pass
+  my_file.close()
+```
+
+You can read more about the methods that python provides you for reading and writing to and from a file from their documentation page:
+
+- [Chapter 7: Input and Output | Reading and Writing Files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
+- [Chapter 7: Input and Output | Methods of File Objects](https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects)
 
 # Control Flow
 This section informs you on the control flow of python. Control flow is the process of handling
