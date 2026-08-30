@@ -1128,12 +1128,13 @@ def main():
   try: # check out try/except statements, will be posted later.
     print("we successfully performed the function countfrom()")
     print(countfrom("we", 2))
-  except TypeError:
+  except TypeError: # Had we not inserted this here, the program would just fail and crash.
     print("we hit an error: TypeError")
     pass 
     # the pass statement will just pretend like nothing happened.
-    # and the program will continue. Had we not inserted this here, 
-    # the program would just fail and crash.
+    # and the program will continue. It technically doesn't need to be here,
+    # since print already fills the block with something, but sometimes it
+    # helps for a visible check that we are just moving to the next statement.
 
   print("Main has completed.") #<< this line is now reachable.
 
